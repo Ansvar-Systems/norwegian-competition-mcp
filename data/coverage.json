@@ -11,12 +11,12 @@
       "authority": "Konkurransetilsynet",
       "url": "https://konkurransetilsynet.no",
       "version": "2004-2025 published decisions",
-      "item_count": 73,
+      "item_count": 143,
       "item_type": "decision",
       "last_refresh": "2026-04-04",
       "refresh_frequency": "quarterly",
-      "completeness": "partial",
-      "completeness_note": "73 decisions covering cartel enforcement (31), abuse of dominance (24), merger decisions (11), sector inquiries (7). Fines totaling 6.48B NOK."
+      "completeness": "comprehensive",
+      "completeness_note": "143 decisions covering gun jumping (39), merger decisions (31), cartel enforcement (30), sector inquiries (18), abuse of dominance (8), obstruction (6), administrative (4), commitments (4), regulatory (3). Fines totaling 6.48B+ NOK."
     },
     {
       "id": "konkurransetilsynet-mergers",
@@ -24,12 +24,12 @@
       "authority": "Konkurransetilsynet",
       "url": "https://konkurransetilsynet.no",
       "version": "2004-2025 merger decisions",
-      "item_count": 43,
+      "item_count": 107,
       "item_type": "merger",
       "last_refresh": "2026-04-04",
       "refresh_frequency": "quarterly",
-      "completeness": "partial",
-      "completeness_note": "43 merger control decisions: 18 cleared, 12 cleared phase 1, 9 cleared with conditions, 4 prohibited"
+      "completeness": "comprehensive",
+      "completeness_note": "107 merger control decisions: 40 cleared phase 1, 26 cleared with conditions, 17 prohibited, 9 closed, 9 notification required, 2 cleared phase 2, 2 implementation prohibition, 2 rejected"
     },
     {
       "id": "konkurransetilsynet-guidelines",
@@ -37,12 +37,12 @@
       "authority": "Konkurransetilsynet",
       "url": "https://konkurransetilsynet.no",
       "version": "Published guidelines and reports",
-      "item_count": 69,
+      "item_count": 149,
       "item_type": "guideline",
       "last_refresh": "2026-04-04",
       "refresh_frequency": "quarterly",
-      "completeness": "partial",
-      "completeness_note": "69 documents: 28 guidelines, 22 market studies, 19 reports (annual reports, legislative summaries, policy papers)"
+      "completeness": "comprehensive",
+      "completeness_note": "149 documents: 63 market studies, 49 hearing statements, 31 guidelines, 4 legislation summaries, 2 regulations"
     },
     {
       "id": "sectors",
@@ -50,12 +50,12 @@
       "authority": "Konkurransetilsynet",
       "url": "https://konkurransetilsynet.no",
       "version": "Cross-referenced from decisions and mergers",
-      "item_count": 15,
+      "item_count": 17,
       "item_type": "sector",
       "last_refresh": "2026-04-04",
       "refresh_frequency": "quarterly",
       "completeness": "full",
-      "completeness_note": "15 sectors: grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, real estate, agriculture, fisheries, technology, manufacturing, retail, professional services"
+      "completeness_note": "17 sectors: agriculture, beverages, construction, digital platforms, energy, financial services, fuel, grocery, healthcare, media, offshore, real estate, retail, security, telecommunications, transport, waste"
     }
   ],
   "gaps": [
@@ -160,8 +160,8 @@
   "summary": {
     "total_tools": 7,
     "total_sources": 4,
-    "total_items": 200,
-    "db_size_mb": 0.53,
+    "total_items": 416,
+    "db_size_mb": 0.68,
     "known_gaps": 6,
     "gaps_planned": 4
   }

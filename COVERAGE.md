@@ -10,11 +10,11 @@ Current coverage of Norwegian competition law enforcement data from Konkurranset
 
 | Source | Authority | Records | Content |
 |--------|-----------|---------|---------|
-| **Konkurransetilsynet** | Norwegian Competition Authority | 73 decisions | Cartel enforcement, abuse of dominance, sector inquiries -- fines totaling 6.48B NOK |
-| **Konkurransetilsynet** | Norwegian Competition Authority | 43 mergers | Merger control (foretakssammenslutninger) -- approved, conditional, prohibited |
-| **Konkurransetilsynet** | Norwegian Competition Authority | 69 guidelines | Market studies, annual reports, legislation summaries, enforcement guidance |
-| **Sectors** | Cross-referenced | 15 sectors | Grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, and more |
-| **Total** | | **200 records** | ~525 KB SQLite database |
+| **Konkurransetilsynet** | Norwegian Competition Authority | 143 decisions | Cartel enforcement, abuse of dominance, gun jumping, sector inquiries, obstruction -- fines totaling 6.48B+ NOK |
+| **Konkurransetilsynet** | Norwegian Competition Authority | 107 mergers | Merger control (foretakssammenslutninger) -- cleared, conditional, prohibited, closed |
+| **Konkurransetilsynet** | Norwegian Competition Authority | 149 guidelines | Market studies, hearing statements, enforcement guidelines, legislation summaries |
+| **Sectors** | Cross-referenced | 17 sectors | Grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, digital platforms, and more |
+| **Total** | | **416 records** | 680 KB SQLite database |
 
 ---
 
@@ -22,10 +22,15 @@ Current coverage of Norwegian competition law enforcement data from Konkurranset
 
 | Type | Norwegian Term | Count | Description |
 |------|----------------|-------|-------------|
-| `cartel` | Kartellsaker | 31 | Price-fixing, market sharing, bid rigging under konkurranseloven ss. 10 |
-| `abuse_of_dominance` | Misbruk av dominerende stilling | 24 | Exclusionary and exploitative conduct under konkurranseloven ss. 11 |
-| `merger` | Foretakssammenslutning | 11 | Merger decisions handled through the decisions table |
-| `sector_inquiry` | Sektorundersokelse | 7 | Market studies and sector investigations |
+| `gun_jumping` | Gjennomforingsforbud | 39 | Premature implementation of mergers before clearance |
+| `merger_decision` | Fusjonsvedtak | 31 | Merger decisions handled through the decisions table |
+| `cartel` | Kartellsaker | 30 | Price-fixing, market sharing, bid rigging under konkurranseloven ss. 10 |
+| `sector_inquiry` | Sektorundersokelse | 18 | Market studies and sector investigations |
+| `abuse_of_dominance` | Misbruk av dominerende stilling | 8 | Exclusionary and exploitative conduct under konkurranseloven ss. 11 |
+| `obstruction` | Hindring av tilsyn | 6 | Obstruction of investigations |
+| `administrative` | Administrativt | 4 | Administrative enforcement actions |
+| `commitments` | Avhjelpende tiltak | 4 | Commitment decisions |
+| `regulatory` | Regulatorisk | 3 | Regulatory decisions |
 
 ### Fine Amounts
 
@@ -37,10 +42,14 @@ Total fines across all decisions: **6.48 billion NOK**. Includes major enforceme
 
 | Outcome | Norwegian Term | Count | Description |
 |---------|----------------|-------|-------------|
-| `cleared` | Godkjent | 18 | Unconditionally approved |
-| `cleared_phase1` | Godkjent fase I | 12 | Approved in Phase I review |
-| `cleared_with_conditions` | Godkjent med vilkar | 9 | Approved subject to remedies |
-| `prohibited` | Forbudt | 4 | Blocked by Konkurransetilsynet |
+| `cleared_phase1` | Godkjent fase I | 40 | Approved in Phase I review |
+| `cleared_with_conditions` | Godkjent med vilkar | 26 | Approved subject to remedies |
+| `prohibited` | Forbudt | 17 | Blocked by Konkurransetilsynet |
+| `closed` | Avsluttet | 9 | Investigation closed without decision |
+| `notification_required` | Meldeplikt | 9 | Notification obligation imposed |
+| `cleared_phase2` | Godkjent fase II | 2 | Approved after Phase II review |
+| `implementation_prohibition` | Gjennomforingsforbud | 2 | Prohibition on implementation pending review |
+| `rejected` | Avvist | 2 | Notification rejected |
 
 ---
 
@@ -48,15 +57,17 @@ Total fines across all decisions: **6.48 billion NOK**. Includes major enforceme
 
 | Type | Count | Description |
 |------|-------|-------------|
-| `guideline` | 28 | Enforcement guidelines, compliance guidance, procedural rules |
-| `market_study` | 22 | Sector analyses, market monitoring reports |
-| `report` | 19 | Annual reports, legislative summaries, policy papers |
+| `market_study` | 63 | Sector analyses, market monitoring reports |
+| `hearing_statement` | 49 | Consultation responses, regulatory hearing submissions |
+| `guideline` | 31 | Enforcement guidelines, compliance guidance, procedural rules |
+| `legislation` | 4 | Legislative summaries and Competition Act materials |
+| `regulation` | 2 | Regulatory framework documents |
 
 ---
 
 ## Sectors Covered
 
-15 sectors with enforcement activity:
+17 sectors with enforcement activity:
 
 | Sector | Decisions | Mergers | Key Areas |
 |--------|-----------|---------|-----------|
@@ -70,11 +81,13 @@ Total fines across all decisions: **6.48 billion NOK**. Includes major enforceme
 | Media | Low | High | Broadcasting, publishing, digital media |
 | Real estate (eiendom) | Low | Medium | Property development, brokerage |
 | Agriculture (landbruk) | Low | Low | Cooperative agreements, supply chains |
-| Fisheries (fiskeri) | Low | Low | Aquaculture, processing, export |
-| Technology (teknologi) | Low | Medium | Software, IT services |
-| Manufacturing (industri) | Medium | Low | Industrial cartels, supply agreements |
+| Fuel (drivstoff) | Medium | Medium | Fuel distribution, retail pricing |
+| Digital platforms (digitale plattformer) | Low | Medium | Platform competition, digital markets |
+| Offshore | Medium | Low | Petroleum services, offshore supply |
+| Beverages (drikkevarer) | Low | Medium | Beverage distribution, brewery mergers |
 | Retail (detaljhandel) | Low | Medium | Non-grocery retail, e-commerce |
-| Professional services | Low | Low | Legal, accounting, consulting |
+| Security (sikkerhet) | Low | Low | Security services, alarm systems |
+| Waste (avfall) | Low | Low | Waste management, recycling |
 
 ---
 
@@ -96,7 +109,6 @@ This is a curated dataset. The following are not yet covered:
 
 ## Limitations
 
-- **Curated dataset** -- 200 records covering major enforcement actions and guidelines. Not a complete archive.
 - **Norwegian text only** -- all content is in Norwegian. English search queries may return limited results.
 - **Summaries, not full legal text** -- records contain representative summaries, not the complete official text from konkurransetilsynet.no.
 - **Manual refresh** -- data is updated manually. Recent decisions and guidelines may not be reflected.
@@ -106,10 +118,11 @@ This is a curated dataset. The following are not yet covered:
 
 ## Planned Improvements
 
-Full automated ingestion is planned from:
+Automated refresh and additional sources planned:
 
-- **konkurransetilsynet.no** -- official decisions, merger notifications, guidelines, market studies
+- **konkurransetilsynet.no** -- automated ingestion of new decisions, merger notifications, guidelines
 - **lovdata.no** -- konkurranseloven (Competition Act) text, forskrifter (regulations), court judgments
+- **Konkurranseklagenemnda** -- Competition Appeals Board decisions
 
 ---
 
