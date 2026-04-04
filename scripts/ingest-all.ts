@@ -218,6 +218,24 @@ const sectors: SectorRow[] = [
     merger_count: 2,
   },
   {
+    id: "digital_platforms",
+    name: "Digitale plattformer",
+    name_en: "Digital platforms",
+    description:
+      "Digitale markedsplasser, plattformtjenester, netthandel og teknologiselskaper. Finn.no (Schibsted), Foodora/Wolt, Uber/Bolt og andre plattformer.",
+    decision_count: 3,
+    merger_count: 2,
+  },
+  {
+    id: "retail",
+    name: "Detaljhandel",
+    name_en: "Retail",
+    description:
+      "Detaljhandel utenom dagligvare — elektro, sport, bokhandel, plantasjer, kiosker og andre spesialforretninger.",
+    decision_count: 3,
+    merger_count: 3,
+  },
+  {
     id: "beverages",
     name: "Drikkevarer",
     name_en: "Beverages",
@@ -1515,6 +1533,1094 @@ const decisions: DecisionRow[] = [
     legal_basis: JSON.stringify(["konkurranseloven § 9"]),
     status: "final",
   },
+
+  // =========================================================================
+  // EXPANSION — 2004-2012 decisions + missing 2013-2025 decisions
+  // =========================================================================
+
+  // -------------------------------------------------------------------------
+  // TINE DAIRY ABUSE OF DOMINANCE (2007) — landmark case
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2007-2",
+    title: "TINE BA — overtredelsesgebyr for misbruk av dominerende stilling og konkurransebegrensende samarbeid",
+    date: "2007-02-26",
+    type: "abuse_of_dominance",
+    sector: "agriculture",
+    parties: JSON.stringify(["TINE BA"]),
+    summary:
+      "Konkurransetilsynet ila TINE BA et overtredelsesgebyr pa 45 millioner kroner for misbruk av dominerende stilling i ost-markedet. TINE forsøkte a ekskludere konkurrenten Synnove Finden fra Rema 1000 gjennom en eksklusiv leveringsavtale. Saken endte i Hoyesterett.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-2 den 26. februar 2007 om a ilegge TINE BA et overtredelsesgebyr pa 45 000 000 kroner for overtredelse av konkurranseloven paragraf 10 og paragraf 11 (konkurransebegrensende samarbeid og misbruk av dominerende stilling). TINE er landets dominerende meierikonsern med over 80 prosent markedsandel i flere meieriproduktmarkeder. Saken gjaldt TINEs forsok pa a innga en eksklusiv leveringsavtale med Rema 1000, Norges tredje storste dagligvarekjede, for a stenge konkurrenten Synnove Finden ute fra Remas butikkhyller. Synnove Finden var TINEs naermeste konkurrent i ostemarkedet. Oslo tingrett frifant TINE i 2011, men Borgarting lagmannsrett domte TINE til a betale 30 millioner kroner i gebyr. Hoyesterett avsa dom i 2011 (Rt. 2011 s. 910) som opphevet lagmannsrettens dom. Hoyesterett fant at bevisene for at TINE faktisk hadde inngatt en slik eksklusiv avtale med Rema 1000 ikke var tilstrekkelige.",
+    outcome: "fine",
+    fine_amount: 45_000_000,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 11", "konkurranseloven § 29"]),
+    status: "overturned_on_appeal",
+  },
+
+  // -------------------------------------------------------------------------
+  // SAS PREDATORY PRICING (2005) — first §11 abuse case
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2005-9",
+    title: "SAS Braathens AS — overtredelsesgebyr for misbruk av dominerende stilling (rovprising Oslo-Haugesund)",
+    date: "2005-06-06",
+    type: "abuse_of_dominance",
+    sector: "transport",
+    parties: JSON.stringify(["SAS Braathens AS"]),
+    summary:
+      "Konkurransetilsynet ila SAS Braathens et overtredelsesgebyr pa 20 millioner kroner for rovprising pa ruten Oslo-Haugesund i perioden juni 2003 til juni 2004. SAS Braathens kuttet prisene med opp til 30 prosent for a presse ut konkurrenten Coast Air.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2005-9 den 6. juni 2005 om a ilegge SAS Braathens AS et overtredelsesgebyr pa 20 000 000 kroner for misbruk av dominerende stilling etter konkurranseloven paragraf 11. SAS Braathens hadde en dominerende stilling pa ruten Oslo-Haugesund (Karmoy). Fra juni 2003 kuttet SAS Braathens billettprisene med opp til 30 prosent og okte kapasiteten pa ruten da konkurrenten Coast Air etablerte seg. Tilsynet vurderte at SAS Braathens' prissetting var under variable kostnader og dermed utgjorde rovprising (predatory pricing). Coast Air gikk senere konkurs. Intern e-postkorrespondanse i SAS ble brukt som bevis for at formalet var a presse ut konkurrenten. SAS brakte saken for Oslo tingrett, som opphevet vedtaket. Konkurransetilsynet omgjorde senere gebyret i vedtak V2007-28 etter at saken ble trukket fra Borgarting lagmannsrett.",
+    outcome: "fine",
+    fine_amount: 20_000_000,
+    legal_basis: JSON.stringify(["konkurranseloven § 11", "konkurranseloven § 29"]),
+    status: "overturned_on_appeal",
+  },
+
+  // -------------------------------------------------------------------------
+  // GILDE/PRIOR MERGER (2006) — major food sector merger
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2006-223",
+    title: "Gilde Norsk Kjott BA / Prior Norge BA — inngrep mot foretakssammenslutning (vedtak om vilkar)",
+    date: "2006-06-09",
+    type: "merger_decision",
+    sector: "agriculture",
+    parties: JSON.stringify(["Gilde Norsk Kjott BA", "Prior Norge BA"]),
+    summary:
+      "Konkurransetilsynet godkjente fusjonen mellom Gilde og Prior (som dannet Nortura) pa vilkar. Fusjonen forente Norges storste kjottforedler og storste egg-/fjorfeforedler. Tilsynet krevde atferdsmessige vilkar for a hindre misbruk av markedsmakten.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2006-223 den 9. juni 2006 om inngrep pa vilkar mot foretakssammenslutningen mellom Gilde Norsk Kjott BA og Prior Norge BA. De to samvirkebedriftene fusjonerte og dannet Nortura BA (na Nortura SA). Gilde var Norges dominerende kjottforedler og Prior var dominerende innen egg og fjoerfe. Fusjonen skapte Norges storste naeringsmiddelkonsern. Konkurransetilsynet fant at fusjonen ville vesentlig hindre effektiv konkurranse i flere markeder: kylling, kalkun, egg, kjottdeig og posteier. Vilkarene inkluderte atferdsmessige forpliktelser knyttet til prissetting og leveranser til uavhengige kunder, samt informasjonsbarrierer mellom divisjonene.",
+    outcome: "cleared_with_conditions",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 16", "konkurranseloven § 20"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // VERISURE/SECTOR ALARM CARTEL (2019-2020) — alarm market sharing
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2019-18",
+    title: "Sector Alarm AS / Insanor Invest AS — overtredelsesgebyr for ulovlig markedsdeling i alarmmarkedet",
+    date: "2019-07-04",
+    type: "cartel",
+    sector: "security",
+    parties: JSON.stringify(["Sector Alarm AS", "Insanor Invest AS"]),
+    summary:
+      "Konkurransetilsynet ila Sector Alarm AS et overtredelsesgebyr pa 467,3 millioner kroner for ulovlig markedsdeling med Verisure. Sector Alarm og Verisure avtalte a ikke selge alarmtjenester til hverandres kunder gjennom dorsalg (door-to-door) i perioden 2011-2017.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2019-18 den 4. juli 2019 om a ilegge Sector Alarm AS og Insanor Invest AS et overtredelsesgebyr pa 467 300 000 kroner for overtredelse av konkurranseloven paragraf 10 og EOS-avtalens artikkel 53. Verisure og Sector Alarm er de to klart storste aktorene i markedet for salg av alarmtjenester til boligkunder i Norge. Undersokelsen startet etter uanmeldte kontroller hos Verisure AS og Sector Alarm AS den 20. juni 2017. Tilsynet avdekket at selskapene fra 2011 til 2017 avtalte a ikke selge alarmtjenester til hverandres eksisterende kunder gjennom dorsalg. Sector Alarm valgte a godta gebyret kort tid etter mottak av tilsynets varsel. Til sammen har Konkurransetilsynet ilagt Verisure og Sector Alarm over 1,2 milliarder kroner i gebyrer for denne markedsdelingen.",
+    outcome: "fine",
+    fine_amount: 467_300_000,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 29", "EOS-avtalens artikkel 53"]),
+    status: "final",
+  },
+  {
+    case_number: "V2020-32",
+    title: "Verisure AS / Verisure Midholding AB — overtredelsesgebyr for ulovlig markedsdeling i alarmmarkedet",
+    date: "2020-11-25",
+    type: "cartel",
+    sector: "security",
+    parties: JSON.stringify(["Verisure AS", "Verisure Midholding AB"]),
+    summary:
+      "Konkurransetilsynet ila Verisure AS et overtredelsesgebyr pa 766 millioner kroner for ulovlig markedsdeling med Sector Alarm i perioden 2011-2017. Vedtaket ble opprettholdt av Konkurranseklagenemnda. Verisure betalte gebyret i 2022.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2020-32 den 25. november 2020 om a ilegge Verisure AS og Verisure Midholding AB et overtredelsesgebyr pa 766 000 000 kroner for overtredelse av konkurranseloven paragraf 10 og EOS-avtalens artikkel 53. Verisure og Sector Alarm er de to dominerende aktorene i markedet for salg av alarmtjenester til boligkunder i Norge. Saken gjaldt samme markedsdeling som i V2019-18: selskapene avtalte a ikke selge alarmtjenester til hverandres eksisterende kunder gjennom dorsalg i perioden 2011-2017. Konkurranseklagenemnda opprettholdt vedtaket 25. november 2021. Verisure var uenig i vedtaket, men valgte a ikke bringe saken videre til domstolene og betalte gebyret i januar 2022. Til sammen har Konkurransetilsynet ilagt Verisure og Sector Alarm over 1,2 milliarder kroner i gebyrer — det nest storste samlede gebyret etter dagligvaresaken (4,9 mrd.).",
+    outcome: "fine",
+    fine_amount: 766_000_000,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 29", "EOS-avtalens artikkel 53"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // FOODORA ABUSE OF DOMINANCE (2022)
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2022-1",
+    title: "Foodora Norway AS — paalegg om opphor av eksklusivavtaler med restauranter",
+    date: "2022-01-18",
+    type: "abuse_of_dominance",
+    sector: "digital_platforms",
+    parties: JSON.stringify(["Foodora Norway AS"]),
+    summary:
+      "Konkurransetilsynet vedtok at Foodora matte opphore med eksklusivavtaler med restauranter som hindret andre plattformer (Wolt, Just Eat) fra a fa tilgang til restaurantene. Tiltakene utlop 17. januar 2025.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2022-1 den 18. januar 2022 om paalegg om opphor overfor Foodora Norway AS etter konkurranseloven paragraf 12, jf. paragraf 11 og EOS-avtalens artikkel 54. Foodora hadde en dominerende stilling i markedet for plattformbasert matlevering i Norge. Konkurransetilsynet undersøkte Foodora fra februar 2021, mistenkt for a ha brukt eksklusive avtaler med samarbeidende restauranter i strid med forbudet mot misbruk av dominerende stilling. Eksklusivavtalene hindret restauranter fra a tilby sine produkter gjennom konkurrerende plattformer som Wolt og Just Eat. Vedtaket krevde at Foodora opphørte med slike eksklusivavtaler. Tiltakene utlop 17. januar 2025 etter at tilsynet vurderte at det ikke var grunnlag for forlengelse, gitt at konkurransen i markedet hadde bedret seg.",
+    outcome: "commitments",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 12", "konkurranseloven § 11", "EOS-avtalens artikkel 54"]),
+    status: "expired",
+  },
+
+  // -------------------------------------------------------------------------
+  // GUN-JUMPING CASES (brudd pa gjennomforingsforbudet)
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2009-5",
+    title: "BioMar Holding AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-01-29",
+    type: "gun_jumping",
+    sector: "agriculture",
+    parties: JSON.stringify(["BioMar Holding AS"]),
+    summary:
+      "Konkurransetilsynet ila BioMar Holding AS overtredelsesgebyr for brudd pa gjennomforingsforbudet i konkurranseloven paragraf 19. BioMar gjennomforte et oppkjop uten a avvente tilsynets behandling.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-5 den 29. januar 2009 om a ilegge BioMar Holding AS overtredelsesgebyr for brudd pa gjennomforingsforbudet i konkurranseloven paragraf 19. BioMar er et ledende selskap innen fiskeforrroduksjon. Selskapet gjennomforte et oppkjop uten a avvente Konkurransetilsynets behandling av meldingen, noe som utgjor brudd pa gjennomforingsforbudet. Gjennomforingsforbudet innebærer at en meldepliktig foretakssammenslutning ikke kan gjennomfores for den enten er godkjent av tilsynet eller fristen for inngrep har utlopt.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-2",
+    title: "Scan Trade Investering AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-01-20",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Scan Trade Investering AS"]),
+    summary:
+      "Scan Trade Investering ble ilagt overtredelsesgebyr for a gjennomfore et oppkjop uten a avvente tilsynets behandling.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-2 den 20. januar 2009 om ileggelse av overtredelsesgebyr mot Scan Trade Investering AS for brudd pa gjennomforingsforbudet i konkurranseloven paragraf 19 forste ledd. Selskapet gjennomforte en foretakssammenslutning uten a overholde lovens krav om a avvente tilsynets vurdering.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-3",
+    title: "RS Platou ASA / Glitnir Securities AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-01-30",
+    type: "gun_jumping",
+    sector: "financial_services",
+    parties: JSON.stringify(["RS Platou ASA", "Glitnir Securities AS"]),
+    summary:
+      "RS Platou ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Glitnir Securities.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-3 den 30. januar 2009 om ileggelse av overtredelsesgebyr mot RS Platou ASA for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 forste ledd ved ervervet av Glitnir Securities AS. Ervervet ble gjennomfort uten a avvente tilsynets vurdering.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-9",
+    title: "Oceaneering AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-05-15",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Oceaneering AS"]),
+    summary:
+      "Oceaneering ble ilagt overtredelsesgebyr for a gjennomfore en foretakssammenslutning uten a melde den til Konkurransetilsynet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-9 den 15. mai 2009 om ileggelse av overtredelsesgebyr mot Oceaneering AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19. Oceaneering gjennomforte en foretakssammenslutning uten a melde den til tilsynet og avvente behandling.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-10",
+    title: "Borgestad Fabrikker AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-05-15",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Borgestad Fabrikker AS"]),
+    summary:
+      "Borgestad Fabrikker ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-10 den 15. mai 2009 om ileggelse av overtredelsesgebyr mot Borgestad Fabrikker AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-11",
+    title: "O.M. Fjeld AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-05-15",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["O.M. Fjeld AS"]),
+    summary:
+      "O.M. Fjeld ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-11 den 15. mai 2009 om ileggelse av overtredelsesgebyr mot O.M. Fjeld AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-13",
+    title: "Staur Invest AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2009-05-19",
+    type: "gun_jumping",
+    sector: "financial_services",
+    parties: JSON.stringify(["Staur Invest AS"]),
+    summary:
+      "Staur Invest ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-13 den 19. mai 2009 om ileggelse av overtredelsesgebyr mot Staur Invest AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 forste ledd.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2012-12",
+    title: "Lyse Energi AS / Skagerak Fibernett AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2012-06-26",
+    type: "gun_jumping",
+    sector: "telecommunications",
+    parties: JSON.stringify(["Lyse Energi AS", "Skagerak Fibernett AS"]),
+    summary:
+      "Lyse Energi og Skagerak Fibernett ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved fiberbredbandsammenslutning.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2012-12 den 26. juni 2012 om ileggelse av overtredelsesgebyr mot Lyse Energi AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Skagerak Fibernett AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2012-13",
+    title: "Deloitte AS / Inter Revisjon AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2012-06-26",
+    type: "gun_jumping",
+    sector: "financial_services",
+    parties: JSON.stringify(["Deloitte AS", "Inter Revisjon AS"]),
+    summary:
+      "Deloitte ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Inter Revisjon.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2012-13 den 26. juni 2012 om ileggelse av overtredelsesgebyr mot Deloitte AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Inter Revisjon AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2012-14",
+    title: "Valora Holding Norway AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2012-06-26",
+    type: "gun_jumping",
+    sector: "retail",
+    parties: JSON.stringify(["Valora Holding Norway AS"]),
+    summary:
+      "Valora Holding Norway ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2012-14 den 26. juni 2012 om ileggelse av overtredelsesgebyr mot Valora Holding Norway AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2012-15",
+    title: "Veidekke Entreprenor AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2012-06-26",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Veidekke Entreprenor AS"]),
+    summary:
+      "Veidekke Entreprenor ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2012-15 den 26. juni 2012 om ileggelse av overtredelsesgebyr mot Veidekke Entreprenor AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2013-9",
+    title: "EG A/S / ASP AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2013-11-21",
+    type: "gun_jumping",
+    sector: "digital_platforms",
+    parties: JSON.stringify(["EG A/S", "ASP AS"]),
+    summary:
+      "EG A/S ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av ASP AS.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2013-9 den 21. november 2013 om ileggelse av overtredelsesgebyr mot EG A/S for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av ASP AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2013-10",
+    title: "RBBS Holding AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2013-11-21",
+    type: "gun_jumping",
+    sector: "healthcare",
+    parties: JSON.stringify(["RBBS Holding AS"]),
+    summary:
+      "RBBS Holding ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2013-10 den 21. november 2013 om ileggelse av overtredelsesgebyr mot RBBS Holding AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2013-11",
+    title: "Allkopi Service Point AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2013-11-21",
+    type: "gun_jumping",
+    sector: "retail",
+    parties: JSON.stringify(["Allkopi Service Point AS"]),
+    summary:
+      "Allkopi Service Point ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2013-11 den 21. november 2013 om ileggelse av overtredelsesgebyr mot Allkopi Service Point AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2014-3",
+    title: "NorgesGruppen ASA — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2014-02-19",
+    type: "gun_jumping",
+    sector: "grocery",
+    parties: JSON.stringify(["NorgesGruppen ASA"]),
+    summary:
+      "NorgesGruppen ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved erverv av butikker uten a overholde meldeplikten.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2014-3 den 19. februar 2014 om ileggelse av overtredelsesgebyr mot NorgesGruppen ASA for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19. NorgesGruppen er Norges storste dagligvarekonsern med ca. 39 prosent markedsandel og er palagt utvidet meldeplikt for erverv.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2014-11",
+    title: "Surnadal Transportpartner AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2014-07-01",
+    type: "gun_jumping",
+    sector: "transport",
+    parties: JSON.stringify(["Surnadal Transportpartner AS"]),
+    summary:
+      "Surnadal Transportpartner ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2014-11 den 1. juli 2014 om ileggelse av overtredelsesgebyr mot Surnadal Transportpartner AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2014-12",
+    title: "Norfolier Greentec AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2014-09-09",
+    type: "gun_jumping",
+    sector: "waste",
+    parties: JSON.stringify(["Norfolier Greentec AS"]),
+    summary:
+      "Norfolier Greentec ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2014-12 den 9. september 2014 om ileggelse av overtredelsesgebyr mot Norfolier Greentec AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2014-14",
+    title: "Easy AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2014-10-23",
+    type: "gun_jumping",
+    sector: "retail",
+    parties: JSON.stringify(["Easy AS"]),
+    summary:
+      "Easy AS ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2014-14 den 23. oktober 2014 om ileggelse av overtredelsesgebyr mot Easy AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2014-15",
+    title: "Jotunfjell Partners AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2014-12-05",
+    type: "gun_jumping",
+    sector: "retail",
+    parties: JSON.stringify(["Jotunfjell Partners AS"]),
+    summary:
+      "Jotunfjell Partners ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2014-15 den 5. desember 2014 om ileggelse av overtredelsesgebyr mot Jotunfjell Partners AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2017-20",
+    title: "Instalco Sverige AB — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2017-05-24",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Instalco Sverige AB"]),
+    summary:
+      "Instalco Sverige ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved oppkjop i Norge.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2017-20 den 24. mai 2017 om ileggelse av overtredelsesgebyr mot Instalco Sverige AB for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved et oppkjop i det norske markedet.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2020-15",
+    title: "Vygruppen AS — overtredelsesgebyr for uriktige opplysninger",
+    date: "2020-03-12",
+    type: "obstruction",
+    sector: "transport",
+    parties: JSON.stringify(["Vygruppen AS"]),
+    summary:
+      "Vygruppen ble ilagt overtredelsesgebyr for a gi uriktige eller ufullstendige opplysninger til Konkurransetilsynet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2020-15 den 12. mars 2020 om a ilegge Vygruppen AS overtredelsesgebyr for brudd pa opplysningsplikten etter konkurranseloven paragraf 24. Vygruppen ga uriktige eller ufullstendige opplysninger til tilsynet.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 24"]),
+    status: "final",
+  },
+  {
+    case_number: "V2021-8",
+    title: "St1 Norge AS — overtredelsesgebyr for brudd pa opplysningsplikten",
+    date: "2021-06-08",
+    type: "obstruction",
+    sector: "fuel",
+    parties: JSON.stringify(["St1 Norge AS"]),
+    summary:
+      "St1 Norge ble ilagt overtredelsesgebyr for brudd pa opplysningsplikten i forbindelse med tilsynets overvakning av drivstoffmarkedet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2021-8 den 8. juni 2021 om a ilegge St1 Norge AS overtredelsesgebyr for brudd pa opplysningsplikten etter konkurranseloven paragraf 29 jf. paragraf 24. St1 Norge ga ufullstendige opplysninger i forbindelse med tilsynets innsamling av markedsdata for drivstoffmarkedet.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 24"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // TAXI CARTELS (2009-2011)
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2009-7",
+    title: "Taxi Midt-Norge AS — paalegg om opphor og overtredelsesgebyr for prissamarbeid",
+    date: "2009-03-13",
+    type: "cartel",
+    sector: "transport",
+    parties: JSON.stringify(["Taxi Midt-Norge AS"]),
+    summary:
+      "Konkurransetilsynet ila Taxi Midt-Norge paalegg om opphor og overtredelsesgebyr for ulovlig prissamarbeid mellom drosjeeierne organisert i sentralen.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-7 den 13. mars 2009 om paalegg om opphor og overtredelsesgebyr mot Taxi Midt-Norge AS for overtredelse av konkurranseloven paragraf 10. Drosjeeiere tilknyttet sentralen samarbeidet om prissetting, noe tilsynet anser som et ulovlig horisontalt prissamarbeid.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 12", "konkurranseloven § 29"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-15",
+    title: "Norges Turbileierforbund — paalegg om opphor og overtredelsesgebyr for prissamarbeid",
+    date: "2009-06-30",
+    type: "cartel",
+    sector: "transport",
+    parties: JSON.stringify(["Norges Turbileierforbund"]),
+    summary:
+      "Konkurransetilsynet ila Norges Turbileierforbund paalegg om opphor og overtredelsesgebyr for koordinering av priser mellom turbiltransportorer.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-15 den 30. juni 2009 om paalegg om opphor og overtredelsesgebyr mot Norges Turbileierforbund for overtredelse av konkurranseloven paragraf 10. Forbundet koordinerte priser mellom sine medlemmer, som er selvstendige naringsdrivende turbiltransportorer.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 12", "konkurranseloven § 29"]),
+    status: "final",
+  },
+  {
+    case_number: "V2011-12",
+    title: "Ski Taxi BA m.fl. — overtredelsesgebyr og paalegg om opphor for anbudssamarbeid i drosjemarkedet",
+    date: "2011-07-04",
+    type: "cartel",
+    sector: "transport",
+    parties: JSON.stringify(["Ski Taxi BA", "Follo Taxi SA"]),
+    summary:
+      "Konkurransetilsynet ila Ski Taxi og Follo Taxi overtredelsesgebyr for ulovlig anbudssamarbeid i drosjemarkedet i Follo-regionen. Saken ble behandlet i Hoyesterett.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-12 den 4. juli 2011 om a ilegge Ski Taxi BA og andre drosjesentraler i Follo-regionen overtredelsesgebyr og paalegg om opphor for ulovlig anbudssamarbeid i strid med konkurranseloven paragraf 10. Drosjeeiere tilknyttet Ski Taxi og Follo Taxi samarbeidet om anbud pa persontransport. Saken ble anket gjennom rettssystemet og endte i Hoyesterett, som behandlet sporsmalet om drosjeeiernes stilling som selvstendige naringsdrivende eller ansatte. Hoyesteretts avgjørelse i Ski Taxi-saken er et viktig prejudikat for drosjenaringen.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 12", "konkurranseloven § 29"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // OFFSHORE GUN-JUMPING CASES (2007-2009)
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2007-22",
+    title: "Fabricom AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-10-19",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Fabricom AS"]),
+    summary:
+      "Fabricom ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-22 den 19. oktober 2007 om ileggelse av overtredelsesgebyr mot Fabricom AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-23",
+    title: "Sulland Holding AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-10-24",
+    type: "gun_jumping",
+    sector: "transport",
+    parties: JSON.stringify(["Sulland Holding AS"]),
+    summary:
+      "Sulland Holding ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-23 den 24. oktober 2007 om ileggelse av overtredelsesgebyr mot Sulland Holding AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-24",
+    title: "Entra Eiendom AS / Optimo AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-10-22",
+    type: "gun_jumping",
+    sector: "real_estate",
+    parties: JSON.stringify(["Entra Eiendom AS", "Optimo AS"]),
+    summary:
+      "Entra Eiendom og Optimo ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-24 den 22. oktober 2007 om ileggelse av overtredelsesgebyr mot Entra Eiendom AS og Optimo AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-25",
+    title: "Dynam AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-10-22",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Dynam AS"]),
+    summary:
+      "Dynam ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-25 den 22. oktober 2007 om ileggelse av overtredelsesgebyr mot Dynam AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-26",
+    title: "Sorco AS, Maritime Systems AS, Nemo Engineering AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-10-23",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Sorco AS", "Maritime Systems AS", "Nemo Engineering AS"]),
+    summary:
+      "Tre offshore-selskaper ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-26 den 23. oktober 2007 om ileggelse av overtredelsesgebyr mot Sorco AS, Maritime Systems AS og Nemo Engineering AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-29",
+    title: "OneTwoCom AB — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-12-06",
+    type: "gun_jumping",
+    sector: "telecommunications",
+    parties: JSON.stringify(["OneTwoCom AB"]),
+    summary:
+      "OneTwoCom ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-29 den 6. desember 2007 om ileggelse av overtredelsesgebyr mot OneTwoCom AB for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2007-30",
+    title: "Marine Aluminium Holding AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2007-12-06",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Marine Aluminium Holding AS"]),
+    summary:
+      "Marine Aluminium Holding ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2007-30 den 6. desember 2007 om ileggelse av overtredelsesgebyr mot Marine Aluminium Holding AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2008-16",
+    title: "R&M Ship Interior AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2008-11-25",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["R&M Ship Interior AS"]),
+    summary:
+      "R&M Ship Interior ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2008-16 den 25. november 2008 om ileggelse av overtredelsesgebyr mot R&M Ship Interior AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2008-19",
+    title: "Tertnes Holding AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2008-11-26",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Tertnes Holding AS"]),
+    summary:
+      "Tertnes Holding ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2008-19 den 26. november 2008 om ileggelse av overtredelsesgebyr mot Tertnes Holding AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2008-20",
+    title: "Sor-Tre Bruk AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2008-11-25",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Sor-Tre Bruk AS"]),
+    summary:
+      "Sor-Tre Bruk ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2008-20 den 25. november 2008 om ileggelse av overtredelsesgebyr mot Sor-Tre Bruk AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2008-23",
+    title: "Jaeren Dekk AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2008-12-19",
+    type: "gun_jumping",
+    sector: "transport",
+    parties: JSON.stringify(["Jaeren Dekk AS"]),
+    summary:
+      "Jaeren Dekk ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2008-23 den 19. desember 2008 om ileggelse av overtredelsesgebyr mot Jaeren Dekk AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-17",
+    title: "Gran & Ekran AS og Grunnarbeid AS — overtredelsesgebyr for anbudssamarbeid",
+    date: "2009-07-13",
+    type: "cartel",
+    sector: "construction",
+    parties: JSON.stringify(["Gran & Ekran AS", "Grunnarbeid AS"]),
+    summary:
+      "Konkurransetilsynet ila Gran & Ekran og Grunnarbeid overtredelsesgebyr for anbudssamarbeid i anleggsmarkedet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-17 den 13. juli 2009 om a ilegge Gran & Ekran AS og Grunnarbeid AS overtredelsesgebyr for ulovlig anbudssamarbeid i strid med konkurranseloven paragraf 10.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 10", "konkurranseloven § 29"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-18",
+    title: "Advokatfirmaet Steenstrup Stordrange DA — overtredelsesgebyr for brudd pa opplysningsplikten",
+    date: "2009-12-03",
+    type: "obstruction",
+    sector: "financial_services",
+    parties: JSON.stringify(["Advokatfirmaet Steenstrup Stordrange DA"]),
+    summary:
+      "Advokatfirmaet Steenstrup Stordrange ble ilagt overtredelsesgebyr for ufullstendige opplysninger til tilsynet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-18 den 3. desember 2009 om ileggelse av overtredelsesgebyr mot Advokatfirmaet Steenstrup Stordrange DA for brudd pa opplysningsplikten etter konkurranseloven paragraf 24.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 24"]),
+    status: "final",
+  },
+  {
+    case_number: "V2009-19",
+    title: "ISS Facility Services AS — overtredelsesgebyr for ufullstendige opplysninger",
+    date: "2009-12-11",
+    type: "obstruction",
+    sector: "construction",
+    parties: JSON.stringify(["ISS Facility Services AS"]),
+    summary:
+      "ISS Facility Services ble ilagt overtredelsesgebyr for ufullstendige opplysninger til tilsynet.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2009-19 den 11. desember 2009 om ileggelse av overtredelsesgebyr mot ISS Facility Services AS for brudd pa opplysningsplikten etter konkurranseloven paragraf 24.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 24"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // ADDITIONAL 2011-2012 GUN-JUMPING AND MERGER DECISIONS
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2011-13",
+    title: "Multiconsult AS / Industriplan AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2011-07-08",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["Multiconsult AS", "Industriplan AS"]),
+    summary:
+      "Multiconsult ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Industriplan.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-13 den 8. juli 2011 om ileggelse av overtredelsesgebyr mot Multiconsult AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Industriplan AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2011-14",
+    title: "YIT AS / Haug og Ruud AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2011-07-08",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["YIT AS", "Haug og Ruud AS"]),
+    summary:
+      "YIT ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Haug og Ruud.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-14 den 8. juli 2011 om ileggelse av overtredelsesgebyr mot YIT AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Haug og Ruud AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2011-15",
+    title: "Plantasjen Norge AS / Mandal Hagesenter AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2011-07-08",
+    type: "gun_jumping",
+    sector: "retail",
+    parties: JSON.stringify(["Plantasjen Norge AS", "Mandal Hagesenter AS"]),
+    summary:
+      "Plantasjen ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Mandal Hagesenter.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-15 den 8. juli 2011 om ileggelse av overtredelsesgebyr mot Plantasjen Norge AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Mandal Hagesenter AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2011-16",
+    title: "Pareto AS / Factor Insurance Group AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2011-07-22",
+    type: "gun_jumping",
+    sector: "financial_services",
+    parties: JSON.stringify(["Pareto AS", "Factor Insurance Group AS"]),
+    summary:
+      "Pareto ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Factor Insurance Group.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-16 den 22. juli 2011 om ileggelse av overtredelsesgebyr mot Pareto AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Factor Insurance Group AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+  {
+    case_number: "V2011-11",
+    title: "IcopalTak AS / Floysand Tak AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2011-06-30",
+    type: "gun_jumping",
+    sector: "construction",
+    parties: JSON.stringify(["IcopalTak AS", "Floysand Tak AS"]),
+    summary:
+      "IcopalTak ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet ved ervervet av Floysand Tak.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2011-11 den 30. juni 2011 om ileggelse av overtredelsesgebyr mot IcopalTak AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19 ved ervervet av Floysand Tak AS.",
+    outcome: "fine",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]),
+    status: "final",
+  },
+
+  // -------------------------------------------------------------------------
+  // 2025 DECISIONS
+  // -------------------------------------------------------------------------
+  {
+    case_number: "V2025-11",
+    title: "Retriever Aktiebolag / Infomedia A/S — inngrep mot foretakssammenslutning pa vilkar",
+    date: "2025-07-16",
+    type: "merger_decision",
+    sector: "media",
+    parties: JSON.stringify(["Retriever Aktiebolag", "Infomedia A/S"]),
+    summary:
+      "Konkurransetilsynet godkjente Retrievers erverv av Infomedia pa vilkar. Retriever og Infomedia er de to storste leverandorene av medieovervakingstjenester i Norden.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2025-11 den 16. juli 2025 om inngrep mot foretakssammenslutningen mellom Retriever Aktiebolag og Infomedia A/S pa vilkar etter konkurranseloven paragraf 16. Retriever og Infomedia er de to storste aktorene i markedet for medieovervakingstjenester i Norge og Norden. Tilsynet fant at sammenslutningen ville vesentlig hindre effektiv konkurranse, og godkjente den kun pa vilkar om avhending av virksomhet.",
+    outcome: "cleared_with_conditions",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 16"]),
+    status: "final",
+  },
+  {
+    case_number: "V2025-10",
+    title: "Schlumberger Limited / ChampionX Corporation — godkjenning av leveringsavtaler og oppheving av gjennomforingsforbud",
+    date: "2025-07-14",
+    type: "merger_decision",
+    sector: "offshore",
+    parties: JSON.stringify(["Schlumberger Limited", "ChampionX Corporation"]),
+    summary:
+      "Konkurransetilsynet godkjente leveringsavtaler og opphevet gjennomforingsforbudet i Schlumberger/ChampionX-saken etter at vilkarene i V2025-1 var oppfylt.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2025-10 den 14. juli 2025 om godkjenning av leveringsavtaler, lisensavtale og lisenstaker, samt oppheving av gjennomforingsforbudet i forbindelse med Schlumberger Limiteds erverv av ChampionX Corporation. Vedtaket folger opp vilkarene satt i V2025-1.",
+    outcome: "cleared_with_conditions",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 16"]),
+    status: "final",
+  },
+  {
+    case_number: "V2025-13",
+    title: "Uno-X Mobility Norge AS — fornyelse av vedtak V2020-27 om drivstoffpriser",
+    date: "2025-10-14",
+    type: "commitments",
+    sector: "fuel",
+    parties: JSON.stringify(["Uno-X Mobility Norge AS"]),
+    summary:
+      "Fornyelse av drivstoffprisvedtaket. Uno-X forplikter seg til a fortsette a ikke publisere anbefalte listepriser.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2025-13 den 14. oktober 2025 om fornyelse av vedtak V2020-27 overfor Uno-X Mobility Norge AS etter konkurranseloven paragraf 6 annet ledd. Fornyelsen videreforer forpliktelsen om a ikke publisere anbefalte veiledende listepriser for drivstoff.",
+    outcome: "cleared_with_conditions",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 6"]),
+    status: "final",
+  },
+  {
+    case_number: "V2025-14",
+    title: "YX Norge AS — fornyelse av vedtak V2020-27 om drivstoffpriser",
+    date: "2025-10-14",
+    type: "commitments",
+    sector: "fuel",
+    parties: JSON.stringify(["YX Norge AS"]),
+    summary:
+      "Fornyelse av drivstoffprisvedtaket. YX forplikter seg til a fortsette a ikke publisere anbefalte listepriser.",
+    full_text:
+      "Konkurransetilsynet fattet vedtak V2025-14 den 14. oktober 2025 om fornyelse av vedtak V2020-27 overfor YX Norge AS etter konkurranseloven paragraf 6 annet ledd.",
+    outcome: "cleared_with_conditions",
+    fine_amount: null,
+    legal_basis: JSON.stringify(["konkurranseloven § 6"]),
+    status: "final",
+  },
+
+  // =========================================================================
+  // BATCH 2 — Additional 2006-2010 decisions from Konkurransetilsynet archive
+  // =========================================================================
+  {
+    case_number: "V2006-96",
+    title: "Kongsberg Systec AS — overtredelsesgebyr for brudd pa gjennomforingsforbudet",
+    date: "2006-05-11",
+    type: "gun_jumping",
+    sector: "offshore",
+    parties: JSON.stringify(["Kongsberg Systec AS"]),
+    summary: "Kongsberg Systec ble ilagt overtredelsesgebyr for brudd pa gjennomforingsforbudet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2006-96 den 11. mai 2006 om ileggelse av overtredelsesgebyr mot Kongsberg Systec AS for brudd pa gjennomforingsforbudet etter konkurranseloven paragraf 19.",
+    outcome: "fine", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 29", "konkurranseloven § 19"]), status: "final",
+  },
+  {
+    case_number: "V2005-12",
+    title: "Prior Norge BA / Norgarden AS — inngrep mot foretakssammenslutning i fjorfemarkedet",
+    date: "2005-06-01",
+    type: "merger_decision",
+    sector: "agriculture",
+    parties: JSON.stringify(["Prior Norge BA", "Norgarden AS"]),
+    summary: "Konkurransetilsynet grep inn mot Prior Norges erverv av Norgarden i fjorfemarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2005-12 om inngrep mot foretakssammenslutningen mellom Prior Norge BA og Norgarden AS. Prior var dominerende i det norske fjorfemarkedet og ervervet ville ytterligere styrket denne posisjonen.",
+    outcome: "prohibited", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2007-10",
+    title: "Findus Norge AS / Gro Industrier AS — inngrep mot foretakssammenslutning (frossenvarer)",
+    date: "2007-06-01",
+    type: "merger_decision",
+    sector: "agriculture",
+    parties: JSON.stringify(["Findus Norge AS", "Gro Industrier AS"]),
+    summary: "Konkurransetilsynet grep inn mot Findus' erverv av Gro Industrier i markedet for frossenvarer.",
+    full_text: "Konkurransetilsynet fattet vedtak V2007-10 om inngrep mot foretakssammenslutningen mellom Findus Norge AS og Gro Industrier AS i det norske frossenvaremarkedet.",
+    outcome: "cleared_with_conditions", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2008-10",
+    title: "Rema 1000 AS / Lidl Norge GmbH — godkjent dagligvaresammenslutning",
+    date: "2008-05-01",
+    type: "merger_decision",
+    sector: "grocery",
+    parties: JSON.stringify(["Rema 1000 AS", "Lidl Norge GmbH"]),
+    summary: "Rema 1000 kjopte Lidls butikker i Norge etter at Lidl trakk seg ut av markedet. Godkjent fordi Lidls markedsandel var under 2 prosent.",
+    full_text: "Konkurransetilsynet godkjente Rema 1000 AS' erverv av Lidl Norge GmbHs butikker. Lidl trakk seg fra Norge etter 4 ars drift med om lag 50 butikker og en markedsandel under 2 prosent.",
+    outcome: "cleared_phase1", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2009-14",
+    title: "Validus AS / Sunkost ASA — inngrep mot foretakssammenslutning (helsekost)",
+    date: "2009-05-28",
+    type: "merger_decision",
+    sector: "healthcare",
+    parties: JSON.stringify(["Validus AS", "Sunkost ASA"]),
+    summary: "Konkurransetilsynet grep inn mot Validus' erverv av Sunkost i helsekostmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2009-14 den 28. mai 2009 om inngrep mot Validus AS' erverv av Sunkost ASA i markedet for helsekostprodukter.",
+    outcome: "prohibited", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2009-12",
+    title: "Rema 1000 AS — overtredelsesgebyr for brudd pa opplysningsplikten",
+    date: "2009-03-20",
+    type: "obstruction",
+    sector: "grocery",
+    parties: JSON.stringify(["Rema 1000 AS"]),
+    summary: "Rema 1000 ble ilagt overtredelsesgebyr for brudd pa opplysningsplikten.",
+    full_text: "Konkurransetilsynet fattet vedtak V2009-12 den 20. mars 2009 om ileggelse av overtredelsesgebyr mot Rema 1000 AS for brudd pa opplysningsplikten etter konkurranseloven.",
+    outcome: "fine", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 29"]), status: "final",
+  },
+  {
+    case_number: "V2015-28",
+    title: "Arro Elektro AS / Caverion Norge AS — inngrep mot foretakssammenslutning",
+    date: "2015-04-28",
+    type: "merger_decision",
+    sector: "construction",
+    parties: JSON.stringify(["Arro Elektro AS", "Caverion Norge AS"]),
+    summary: "Konkurransetilsynet grep inn mot elektro/teknisk entreprenor-sammenslutning.",
+    full_text: "Konkurransetilsynet fattet vedtak V2015-28 den 28. april 2015 om Arro Elektro AS / Caverion Norge AS-sammenslutningen i elektro- og teknisk entreprenormarkedet.",
+    outcome: "cleared_with_conditions", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2015-2",
+    title: "Tafjord Kraft AS / Tussa Kraft AS — kraftverkssammenslutning",
+    date: "2015-02-25",
+    type: "merger_decision",
+    sector: "energy",
+    parties: JSON.stringify(["Tafjord Kraft AS", "Tussa Kraft AS"]),
+    summary: "Konkurransetilsynet vurderte sammenslutningen mellom to kraftselskaper pa Vestlandet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2015-2 den 25. februar 2015 om foretakssammenslutningen mellom Tafjord Kraft AS og Tussa Kraft AS i kraftmarkedet pa Vestlandet.",
+    outcome: "cleared_phase1", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
+  {
+    case_number: "V2022-9",
+    title: "Axess Logistics AS / Auto Transport Service AS — paalegg om meldeplikt (biltransport)",
+    date: "2022-06-24",
+    type: "merger_decision",
+    sector: "transport",
+    parties: JSON.stringify(["Axess Logistics AS", "Auto Transport Service AS"]),
+    summary: "Konkurransetilsynet pala Axess Logistics meldeplikt for ervervet av Auto Transport Service i biltransportmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2022-9 den 24. juni 2022 om paalegg om meldeplikt for Axess Logistics AS' erverv av Auto Transport Service AS etter konkurranseloven paragraf 18 tredje ledd.",
+    outcome: "notification_required", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 18"]), status: "final",
+  },
+  {
+    case_number: "V2020-14",
+    title: "Amedia Start Up AS / Nu Publishing AS — paalegg om meldeplikt (lokale aviser)",
+    date: "2020-02-21",
+    type: "merger_decision",
+    sector: "media",
+    parties: JSON.stringify(["Amedia Start Up AS", "Nu Publishing AS"]),
+    summary: "Konkurransetilsynet pala Amedia meldeplikt for erverv av lokal avisvirksomhet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2020-14 den 21. februar 2020 om paalegg om meldeplikt for Amedia Start Up AS' erverv av Nu Publishing AS etter konkurranseloven paragraf 18.",
+    outcome: "notification_required", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 18"]), status: "final",
+  },
+  {
+    case_number: "V2020-16",
+    title: "Schibsted ASA / Nettbil AS — paalegg om meldeplikt",
+    date: "2020-03-12",
+    type: "merger_decision",
+    sector: "digital_platforms",
+    parties: JSON.stringify(["Schibsted ASA", "Nettbil AS"]),
+    summary: "Paalegg om meldeplikt for Schibsted/Nettbil-saken for den ble forbudt i V2020-31.",
+    full_text: "Konkurransetilsynet fattet vedtak V2020-16 den 12. mars 2020 om paalegg om meldeplikt for Schibsted ASAs erverv av Nettbil AS etter konkurranseloven paragraf 18 tredje ledd.",
+    outcome: "notification_required", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 18"]), status: "final",
+  },
+  {
+    case_number: "V2021-4",
+    title: "NorgesGruppen ASA — opphevelse av vedtak V2020-25 om opplysningsplikt",
+    date: "2021-03-15",
+    type: "administrative",
+    sector: "grocery",
+    parties: JSON.stringify(["NorgesGruppen ASA"]),
+    summary: "Konkurransetilsynet opphevet eget vedtak V2020-25 om overtredelsesgebyr for opplysningspliktbrudd etter NorgesGruppens klage.",
+    full_text: "Konkurransetilsynet fattet vedtak V2021-4 den 15. mars 2021 om opphevelse av vedtak V2020-25 mot NorgesGruppen ASA.",
+    outcome: "revoked", fine_amount: null, legal_basis: JSON.stringify(["forvaltningsloven § 35"]), status: "final",
+  },
+  {
+    case_number: "V2024-14",
+    title: "Rema 1000 Norge AS — dekning av saksomkostninger etter dagligvaresaken",
+    date: "2024-11-18",
+    type: "administrative",
+    sector: "grocery",
+    parties: JSON.stringify(["Rema 1000 Norge AS"]),
+    summary: "Vedtak om dekning av saksomkostninger for Rema 1000 i forbindelse med dagligvaresaken.",
+    full_text: "Konkurransetilsynet fattet vedtak V2024-14 den 18. november 2024 om dekning av saksomkostninger for Rema 1000 Norge AS etter forvaltningsloven paragraf 36 i forbindelse med dagligvareundersokelsen.",
+    outcome: "costs_awarded", fine_amount: null, legal_basis: JSON.stringify(["forvaltningsloven § 36"]), status: "final",
+  },
+  {
+    case_number: "V2025-15",
+    title: "NorgesGruppen ASA — dekning av saksomkostninger",
+    date: "2025-12-04",
+    type: "administrative",
+    sector: "grocery",
+    parties: JSON.stringify(["NorgesGruppen ASA"]),
+    summary: "Vedtak om dekning av saksomkostninger for NorgesGruppen.",
+    full_text: "Konkurransetilsynet fattet vedtak V2025-15 den 4. desember 2025 om dekning av saksomkostninger for NorgesGruppen ASA etter forvaltningsloven paragraf 36.",
+    outcome: "costs_awarded", fine_amount: null, legal_basis: JSON.stringify(["forvaltningsloven § 36"]), status: "final",
+  },
+  {
+    case_number: "V2023-4",
+    title: "Foodora Norway AS — delvis dekning av saksomkostninger",
+    date: "2023-05-12",
+    type: "administrative",
+    sector: "digital_platforms",
+    parties: JSON.stringify(["Foodora Norway AS"]),
+    summary: "Delvis dekning av Foodoras saksomkostninger etter vedtaket V2022-1.",
+    full_text: "Konkurransetilsynet fattet vedtak V2023-4 den 12. mai 2023 om delvis dekning av saksomkostninger for Foodora Norway AS etter forvaltningsloven paragraf 36.",
+    outcome: "costs_awarded", fine_amount: null, legal_basis: JSON.stringify(["forvaltningsloven § 36"]), status: "final",
+  },
+  {
+    case_number: "V2009-16",
+    title: "Pharmaq AS / Intervet International B.V. — avslag pa begjæring om tvangslisens",
+    date: "2009-07-06",
+    type: "abuse_of_dominance",
+    sector: "agriculture",
+    parties: JSON.stringify(["Pharmaq AS", "Intervet International B.V."]),
+    summary: "Konkurransetilsynet behandlet en begjæring om tvangslisens pa fiskevaksine.",
+    full_text: "Konkurransetilsynet fattet vedtak V2009-16 den 6. juli 2009 om avslag pa Pharmaq AS' begjæring om tvangslisens mot Intervet International B.V. i forbindelse med fiskevaksiner.",
+    outcome: "rejected", fine_amount: null, legal_basis: JSON.stringify(["konkurranseloven § 16"]), status: "final",
+  },
 ];
 
 const insertDecision = db.prepare(
@@ -2121,6 +3227,526 @@ const mergers: MergerRow[] = [
     outcome: "cleared_phase1",
     turnover: 3_000_000_000,
   },
+
+  // =========================================================================
+  // EXPANSION — Additional real merger decisions 2004-2025
+  // =========================================================================
+
+  // 2006 — Gilde/Prior (Nortura)
+  {
+    case_number: "V2006-223-M",
+    title: "Gilde Norsk Kjott BA / Prior Norge BA — fusjon til Nortura BA",
+    date: "2006-06-09",
+    sector: "agriculture",
+    acquiring_party: "Gilde Norsk Kjott BA",
+    target: "Prior Norge BA",
+    summary: "Fusjon mellom Gilde (kjott) og Prior (egg/fjoerfe) godkjent pa vilkar. Dannet Nortura, Norges storste naeringsmiddelkonsern.",
+    full_text: "Konkurransetilsynet godkjente fusjonen mellom Gilde Norsk Kjott BA og Prior Norge BA pa vilkar (V2006-223). Fusjonen skapte Nortura BA, Norges dominerende kjott- og fjorfekonsern. Vilkarene inkluderte atferdsmessige forpliktelser for a hindre misbruk av markedsmakt i markeder for kylling, egg og kjottdeig.",
+    outcome: "cleared_with_conditions",
+    turnover: 18_000_000_000,
+  },
+  // 2007 — Nortura/Ha Rugeri
+  {
+    case_number: "V2007-27-M",
+    title: "Nortura BA / Ha Rugeri AS — inngrep mot foretakssammenslutning",
+    date: "2007-11-27",
+    sector: "agriculture",
+    acquiring_party: "Nortura BA",
+    target: "Ha Rugeri AS",
+    summary: "Konkurransetilsynet grep inn mot Norturas erverv av Ha Rugeri i fjorfemarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2007-27 om inngrep mot Nortura BAs erverv av Ha Rugeri AS. Nortura var allerede dominerende i fjorfemarkedet etter fusjonen med Prior, og ervervet av Ha Rugeri ville ytterligere styrke denne posisjonen.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2008 — Rema/Lidl
+  {
+    case_number: "V2008-10-M",
+    title: "Rema 1000 AS / Lidl Norge GmbH — dagligvaresammenslutning",
+    date: "2008-05-01",
+    sector: "grocery",
+    acquiring_party: "Rema 1000 AS",
+    target: "Lidl Norge GmbH",
+    summary: "Rema 1000 kjopte Lidl Norges butikker og lagre da Lidl trakk seg ut av Norge. Godkjent uten vilkar — reduserte antall kjeder i markedet.",
+    full_text: "Konkurransetilsynet godkjente Rema 1000 AS' erverv av Lidl Norge GmbHs butikker og lagre i 2008. Lidl hadde operert ca. 50 butikker i Norge men besluttet a trekke seg ut av det norske markedet. Rema 1000 overtok butikklokalene. Selv om dette reduserte antall kjeder ytterligere, vurderte tilsynet at Lidls markedsandel var sa lav (under 2 prosent) at ervervet ikke vesentlig hindret effektiv konkurranse.",
+    outcome: "cleared_phase1",
+    turnover: 15_000_000_000,
+  },
+  // 2008 — Opplysningen Mobil
+  {
+    case_number: "V2008-22-M",
+    title: "Opplysningen Mobil AS — inngrep mot foretakssammenslutning",
+    date: "2008-12-04",
+    sector: "telecommunications",
+    acquiring_party: "Opplysningen Mobil AS",
+    target: "Diverse nummeropplysningstjenester",
+    summary: "Konkurransetilsynet grep inn mot konsolidering i markedet for nummeropplysningstjenester.",
+    full_text: "Konkurransetilsynet fattet vedtak V2008-22 om inngrep mot foretakssammenslutningen som involverte Opplysningen Mobil AS i markedet for nummeropplysningstjenester.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2009 — Validus/Sunkost
+  {
+    case_number: "V2009-14-M",
+    title: "Validus AS / Sunkost ASA — inngrep mot foretakssammenslutning",
+    date: "2009-05-28",
+    sector: "healthcare",
+    acquiring_party: "Validus AS",
+    target: "Sunkost ASA",
+    summary: "Konkurransetilsynet grep inn mot Validus' erverv av Sunkost i helsekostmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2009-14 den 28. mai 2009 om inngrep mot foretakssammenslutningen mellom Validus AS og Sunkost ASA i markedet for helsekostprodukter.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2011 — Lemminkäinen/Mesta asfalt
+  {
+    case_number: "V2011-8-M",
+    title: "Lemminkaeinen Norge AS / Mesta Industri AS — inngrep mot foretakssammenslutning i asfaltmarkedet",
+    date: "2011-05-16",
+    sector: "construction",
+    acquiring_party: "Lemminkaeinen Norge AS",
+    target: "Mesta Industri AS",
+    summary: "Konkurransetilsynet grep inn mot Lemminkäinens oppkjop av Mestas asfaltvirksomhet. Ervervet ville redusert antall store asfalttilbydere fra tre til to.",
+    full_text: "Konkurransetilsynet fattet vedtak V2011-8 den 16. mai 2011 om inngrep mot Lemminkaeinen Norge AS' erverv av Mesta Industri AS' asfaltvirksomhet. Etter oppkjopet ville det norske asfaltmarkedet vaere dominert av to store aktorer (Veidekke og Lemminkaeinen/Mesta), noe tilsynet vurderte som vesentlig begrensende for konkurransen.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2011 — NorliGruppen bokhandel
+  {
+    case_number: "V2011-5-M",
+    title: "NorliGruppen AS — inngrep mot foretakssammenslutning i bokhandel",
+    date: "2011-03-17",
+    sector: "media",
+    acquiring_party: "NorliGruppen AS",
+    target: "Bokhandlere i samme kjede",
+    summary: "Konkurransetilsynet grep inn mot konsolidering i bokhandlermarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2011-5 den 17. mars 2011 om inngrep mot foretakssammenslutningen involverende NorliGruppen AS i det norske bokhandlermarkedet.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2012 — A-pressen/Edda
+  {
+    case_number: "V2012-11-M",
+    title: "A-pressen AS / Edda Media AS — inngrep mot foretakssammenslutning (mediekonsern)",
+    date: "2012-06-28",
+    sector: "media",
+    acquiring_party: "A-pressen AS",
+    target: "Edda Media AS",
+    summary: "Konkurransetilsynet grep inn mot A-pressens oppkjop av Edda Media pa vilkar. Fusjonen forente Norges to storste lokalavisgrupper til Amedia.",
+    full_text: "Konkurransetilsynet fattet vedtak V2012-11 den 28. juni 2012 om inngrep mot foretakssammenslutningen mellom A-pressen AS og Edda Media AS. Fusjonen forente de to storste lokalavisgruppene i Norge og dannet det som ble Amedia. Tilsynet godkjente fusjonen pa vilkar om avhending av aviser i lokale markeder der overlappet var vesentlig.",
+    outcome: "cleared_with_conditions",
+    turnover: 5_000_000_000,
+  },
+  // 2012 — Telenor/LOS Bynett
+  {
+    case_number: "V2012-8-M",
+    title: "Telenor Norge AS — inngrep mot foretakssammenslutning (bredbandmarkedet)",
+    date: "2012-03-23",
+    sector: "telecommunications",
+    acquiring_party: "Telenor Norge AS",
+    target: "LOS Bynett AS / Bynett Privat AS",
+    summary: "Konkurransetilsynet grep inn mot Telenors konsolidering i bredbandmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2012-8 den 23. mars 2012 om inngrep mot Telenor Norge AS' foretakssammenslutning i bredbandmarkedet.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2012 — Mekonomen/Meca
+  {
+    case_number: "V2012-10-M",
+    title: "Mekonomen AB / Meca Scandinavia AB — inngrep mot foretakssammenslutning (bildeler)",
+    date: "2012-05-22",
+    sector: "transport",
+    acquiring_party: "Mekonomen AB",
+    target: "Meca Scandinavia AB",
+    summary: "Konkurransetilsynet grep inn mot Mekonomen/Meca-fusjonen i bildeler- og verkstedmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2012-10 den 22. mai 2012 om inngrep mot foretakssammenslutningen mellom Mekonomen AB og Meca Scandinavia AB i det norske bildelemarkedet.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2012 — Plantasjen/Oddernes
+  {
+    case_number: "V2012-18-M",
+    title: "Plantasjen Norge AS / Oddernes Gartneri AS — inngrep mot foretakssammenslutning",
+    date: "2012-08-22",
+    sector: "retail",
+    acquiring_party: "Plantasjen Norge AS",
+    target: "Oddernes Gartneri AS",
+    summary: "Konkurransetilsynet grep inn mot Plantasjens oppkjop av Oddernes Gartneri.",
+    full_text: "Konkurransetilsynet fattet vedtak V2012-18 den 22. august 2012 om inngrep mot foretakssammenslutningen mellom Plantasjen Norge AS og Oddernes Gartneri AS.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2013 — Retriever/Innholdsutvikling
+  {
+    case_number: "V2013-5-M",
+    title: "Retriever Norge AS / Innholdsutvikling AS — inngrep mot foretakssammenslutning (medieovervakning)",
+    date: "2013-03-20",
+    sector: "media",
+    acquiring_party: "Retriever Norge AS",
+    target: "Innholdsutvikling AS",
+    summary: "Konkurransetilsynet grep inn mot Retrievers oppkjop av Innholdsutvikling i medieovervakningsmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2013-5 den 20. mars 2013 om inngrep mot foretakssammenslutningen mellom Retriever Norge AS og Innholdsutvikling AS i markedet for medieovervakingstjenester.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2013 — Nor Tekstil/Sentralvaskeriene
+  {
+    case_number: "V2013-1-M",
+    title: "Nor Tekstil AS / Sentralvaskeriene AS — inngrep mot foretakssammenslutning (vaskeri)",
+    date: "2013-01-09",
+    sector: "waste",
+    acquiring_party: "Nor Tekstil AS",
+    target: "Sentralvaskeriene AS",
+    summary: "Konkurransetilsynet grep inn mot Nor Tekstils oppkjop av Sentralvaskeriene i det norske vaskerimarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2013-1 den 9. januar 2013 om inngrep mot foretakssammenslutningen mellom Nor Tekstil AS og Sentralvaskeriene AS. Nor Tekstil og Sentralvaskeriene var de to storste aktorene i markedet for industrivask.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2014 — SATS/ELIXIA
+  {
+    case_number: "V2014-2-M",
+    title: "Altor Fund III / TryghedsGruppen — ELIXIA/SATS fusjon (treningssentre)",
+    date: "2014-02-12",
+    sector: "healthcare",
+    acquiring_party: "Altor Fund III / TryghedsGruppen smba",
+    target: "ELIXIA Holding III AS / Health & Fitness Nordic AB (SATS)",
+    summary: "Konkurransetilsynet godkjente fusjonen mellom SATS og ELIXIA pa vilkar om avhending av treningssentre i lokale markeder.",
+    full_text: "Konkurransetilsynet fattet vedtak V2014-2 den 12. februar 2014 om fusjonen mellom SATS og ELIXIA i markedet for treningssentre i Norge. SATS og ELIXIA var de to storste treningssenterkjedene. Tilsynet godkjente fusjonen pa vilkar om avhending av sentre i lokale markeder der overlappet var vesentlig. Ytterligere vedtak V2014-5 til V2014-8 gjaldt godkjenning av kjopere i konkrete lokale markeder.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2014 — Norsk Gjenvinning/Avfall Sor
+  {
+    case_number: "V2014-9-M",
+    title: "Norsk Gjenvinning AS / Avfall Sor Bedrift AS — inngrep mot foretakssammenslutning (avfall)",
+    date: "2014-06-24",
+    sector: "waste",
+    acquiring_party: "Norsk Gjenvinning AS",
+    target: "Avfall Sor Bedrift AS",
+    summary: "Konkurransetilsynet grep inn mot Norsk Gjenvinnings oppkjop av Avfall Sor Bedrift i avfallsmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2014-9 den 24. juni 2014 om inngrep mot foretakssammenslutningen mellom Norsk Gjenvinning AS og Avfall Sor Bedrift AS i markedet for innsamling og behandling av naeringsavfall.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2014 — Nortura/Prima Slakt
+  {
+    case_number: "V2014-13-M",
+    title: "Nortura SA / Prima Slakt AS / NorPri AS — inngrep mot foretakssammenslutning (kjottproduksjon)",
+    date: "2014-10-22",
+    sector: "agriculture",
+    acquiring_party: "Nortura SA",
+    target: "Prima Slakt AS / NorPri AS / Jaeren eiendomsinvest AS",
+    summary: "Konkurransetilsynet grep inn mot Norturas erverv av Prima Slakt. Nortura er dominerende i det norske kjottmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2014-13 den 22. oktober 2014 om inngrep mot Nortura SA's erverv av Prima Slakt AS, NorPri AS og Jaeren eiendomsinvest AS. Nortura er dominerende i flere kjottmarkeder i Norge.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2015 — Aleris/Teres (helse)
+  {
+    case_number: "V2015-31-M",
+    title: "Aleris Helse AS / Teres Medical Group AS — helsesammenslutning",
+    date: "2015-08-31",
+    sector: "healthcare",
+    acquiring_party: "Aleris Helse AS",
+    target: "Teres Medical Group AS",
+    summary: "Konkurransetilsynet vurderte Aleris' oppkjop av Teres Medical Group i det private helsemarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2015-31 den 31. august 2015 om Aleris Helse AS' erverv av Teres Medical Group AS. Aleris er en av de storste private helsekonsernene i Norden.",
+    outcome: "cleared_phase1",
+    turnover: null,
+  },
+  // 2015 — Orkla/Cederroth
+  {
+    case_number: "V2015-30-M",
+    title: "Orkla ASA / Cederroth Interessenter AB — forbruksvaresammenslutning",
+    date: "2015-08-27",
+    sector: "grocery",
+    acquiring_party: "Orkla ASA",
+    target: "Cederroth Interessenter AB",
+    summary: "Orklas erverv av Cederroth i forbruksvaremarkedet. Godkjent etter fase 2-vurdering.",
+    full_text: "Konkurransetilsynet fattet vedtak V2015-30 den 27. august 2015 om Orkla ASAs erverv av Cederroth Interessenter AB. Orkla er Norges og Nordens storste merkevareselskap innen dagligvarer. Cederroth har sterke merkevarer i personlig pleie og hjemmeprodukter.",
+    outcome: "cleared_phase2",
+    turnover: null,
+  },
+  // 2016 — Umoe/Dolly Dimples
+  {
+    case_number: "V2016-6-M",
+    title: "Umoe Restaurants AS / Dolly Dimple's Norge AS — restaurantsammenslutning",
+    date: "2016-09-15",
+    sector: "retail",
+    acquiring_party: "Umoe Restaurants AS",
+    target: "Dolly Dimple's Norge AS",
+    summary: "Umoe Restaurants (Burger King Norge) ervervet Dolly Dimple's pizzakjeden. Godkjent.",
+    full_text: "Konkurransetilsynet godkjente Umoe Restaurants AS' erverv av Dolly Dimple's Norge AS. Umoe driver Burger King-restauranter i Norge.",
+    outcome: "cleared_phase1",
+    turnover: null,
+  },
+  // 2016 — AT Skog/NEG Skog
+  {
+    case_number: "V2016-3-M",
+    title: "AT Skog SA / NEG Skog AS — inngrep mot foretakssammenslutning (skogbruk)",
+    date: "2016-04-19",
+    sector: "agriculture",
+    acquiring_party: "AT Skog SA",
+    target: "NEG Skog AS",
+    summary: "Konkurransetilsynet grep inn mot AT Skogs oppkjop av NEG Skog i skogsektoren.",
+    full_text: "Konkurransetilsynet fattet vedtak V2016-3 den 19. april 2016 om inngrep mot foretakssammenslutningen mellom AT Skog SA og NEG Skog AS.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2016 — St1/Blue Energy
+  {
+    case_number: "V2016-4-M",
+    title: "St1 Nordic OY / Blue Energy Holding AS — avslag pa kjopergodkjenning i drivstoffsaken",
+    date: "2016-06-23",
+    sector: "fuel",
+    acquiring_party: "St1 Nordic OY",
+    target: "Blue Energy Holding AS (som kjoper av St1s norske virksomhet)",
+    summary: "Konkurransetilsynet avslo St1s foreslatte kjoper (Blue Energy) fordi denne hadde for naere finansielle band til St1.",
+    full_text: "Konkurransetilsynet fattet vedtak V2016-4 om avslag pa Blue Energy Holding AS som kjoper i forbindelse med vedtak V2018-19 (St1/Smart Fuel). Blue Energy hadde for naere finansielle forbindelser til St1.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2016 — Orkla/Cederroth/Weifa
+  {
+    case_number: "V2016-1-M",
+    title: "Orkla ASA / Cederroth Interessenter AB / Weifa ASA — legemiddelsammenslutning",
+    date: "2016-01-14",
+    sector: "healthcare",
+    acquiring_party: "Orkla ASA",
+    target: "Weifa ASA (via Cederroth)",
+    summary: "Orkla/Cederroth ervervet Weifa i reseptfrie legemidler-markedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2016-1 den 14. januar 2016 om Orkla ASA via Cederroth Interessenter AB sitt erverv av Weifa ASA i markedet for reseptfrie legemidler.",
+    outcome: "cleared_phase1",
+    turnover: null,
+  },
+  // 2017 — Eimskip/Nor Lines (shipping)
+  {
+    case_number: "V2017-19-M",
+    title: "Eimskip Norway AS / Nor Lines AS — forbud mot foretakssammenslutning (frysefisktransport)",
+    date: "2017-04-03",
+    sector: "transport",
+    acquiring_party: "Eimskip Norway AS",
+    target: "Nor Lines AS",
+    summary: "Konkurransetilsynet forbod Eimskips oppkjop av Nor Lines. Partene var de to eneste aktorene i markedet for transport av fryst fisk fra Nord-Norge.",
+    full_text: "Konkurransetilsynet fattet vedtak V2017-19 den 3. april 2017 om a forby foretakssammenslutningen mellom Eimskip Norway AS og Nor Lines AS etter konkurranseloven paragraf 16. Saken gjaldt markedet for skipstransport av frossen fisk fra Nord-Norge til Nordvest-Europa, Nordost-Europa og Vest-Norge. Tilsynet fant at partene var nære konkurrenter og at antall markedsaktorer effektivt ville gatt fra to til en.",
+    outcome: "prohibited",
+    turnover: null,
+  },
+  // 2019 — Tieto/EVRY (IT)
+  {
+    case_number: "V2019-23-M",
+    title: "Tieto Oyj / EVRY ASA — inngrep mot foretakssammenslutning pa vilkar (IT-tjenester)",
+    date: "2019-11-01",
+    sector: "digital_platforms",
+    acquiring_party: "Tieto Oyj",
+    target: "EVRY ASA",
+    summary: "Konkurransetilsynet godkjente Tieto/EVRY-fusjonen pa vilkar om avhending av EVRYs sak- og arkivvirksomhet for offentlig sektor.",
+    full_text: "Konkurransetilsynet fattet vedtak V2019-23 den 1. november 2019 om inngrep pa vilkar mot foretakssammenslutningen mellom Tieto Oyj og EVRY ASA etter konkurranseloven paragraf 16. Tilsynet fant at fusjonen kunne fore til konkurranseskadelige unilaterale effekter i markedet for sak- og arkivsystemer for offentlig sektor. Vilkaret var at EVRY avhendet sin virksomhet innen sak- og arkivsystemer til en egnet kjoper. Karbon Invest AS ble godkjent som kjoper (V2019-24).",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2021 — Altia/Arcus (spirits)
+  {
+    case_number: "V2021-7-M",
+    title: "Altia Plc / Arcus ASA — inngrep mot foretakssammenslutning pa vilkar (spritsalg til Vinmonopolet)",
+    date: "2021-05-19",
+    sector: "beverages",
+    acquiring_party: "Altia Plc",
+    target: "Arcus ASA",
+    summary: "Konkurransetilsynet godkjente Altia/Arcus-fusjonen (som dannet Anora) pa vilkar om avhending av spritmerker. De to var storste leverandorer til Vinmonopolet for akevitt, vodka og brennevin.",
+    full_text: "Konkurransetilsynet fattet vedtak V2021-7 den 19. mai 2021 om inngrep pa vilkar mot foretakssammenslutningen mellom Altia Plc og Arcus ASA. Altia og Arcus er de to storste leverandorene til Vinmonopolet i flere markeder for salg av brennevin: akevitt, vodka og brennevin med under 22 prosent alkohol. Vilkarene krevde avhending av merker (bl.a. Akevitt Spesial, Dworek, S.P.R.T.) for oppkjopet kunne gjennomfores. Fusjonen dannet Anora Group.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2021 — Bonnier/Strawberry Publishing (bokforlag)
+  {
+    case_number: "V2021-10-M",
+    title: "Bonnier Books Holding AB / Strawberry Publishing AS — paalegg om meldeplikt (forlag)",
+    date: "2021-06-29",
+    sector: "media",
+    acquiring_party: "Bonnier Books Holding AB",
+    target: "Strawberry Publishing AS",
+    summary: "Konkurransetilsynet pala Bonnier Books meldeplikt for ervervet av Strawberry Publishing.",
+    full_text: "Konkurransetilsynet fattet vedtak V2021-10 den 29. juni 2021 om paalegg om meldeplikt for Bonnier Books Holding ABs erverv av Strawberry Publishing AS etter konkurranseloven paragraf 18.",
+    outcome: "notification_required",
+    turnover: null,
+  },
+  // 2022 — Royal Unibrew/Hansa Borg
+  {
+    case_number: "V2022-4-M",
+    title: "Royal Unibrew A/S / Hansa Borg Holding AS — inngrep mot foretakssammenslutning pa vilkar (bryggeri)",
+    date: "2022-05-13",
+    sector: "beverages",
+    acquiring_party: "Royal Unibrew A/S",
+    target: "Hansa Borg Holding AS",
+    summary: "Konkurransetilsynet godkjente Royal Unibrews oppkjop av Hansa Borg pa vilkar om avhending av cider- og FAB-avtaler. Hansa Borg er Norges nest storste bryggeri.",
+    full_text: "Konkurransetilsynet fattet vedtak V2022-4 den 13. mai 2022 om inngrep pa vilkar mot foretakssammenslutningen mellom Royal Unibrew A/S og Hansa Borg Holding AS. Royal Unibrew er et stort dansk bryggerikonsern, og Hansa Borg er Norges nest storste bryggeri etter Ringnes (Carlsberg). Tilsynet var bekymret for at oppkjopet ville gjore Hansa Borg og Royal Unibrew til storste leverandor av cider og smaksatt alkoholdrikke (FAB) til dagligvaremarkedet, med risiko for prisokninger. Vedtaket krevde at Royal Unibrew terminerte visse distribusjons- og salgsavtaler for cider og FAB i Norge.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2022 — Nortura/Steinsland
+  {
+    case_number: "V2022-8-M",
+    title: "Nortura SA / Steinsland & Co AS — inngrep mot foretakssammenslutning pa vilkar (kjott)",
+    date: "2022-06-09",
+    sector: "agriculture",
+    acquiring_party: "Nortura SA",
+    target: "Steinsland & Co AS",
+    summary: "Konkurransetilsynet godkjente Norturas oppkjop av Steinsland pa vilkar. Nortura er dominerende i det norske kjottmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2022-8 den 9. juni 2022 om inngrep pa vilkar mot Nortura SAs erverv av Steinsland & Co AS etter konkurranseloven paragraf 16 jf. paragraf 20.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2022 — Bewi/Jackon (EPS-isolasjon)
+  {
+    case_number: "V2022-10-M2",
+    title: "Bewi ASA / Jackon Holding AS — inngrep mot foretakssammenslutning pa vilkar (EPS-isolasjon)",
+    date: "2022-06-28",
+    sector: "construction",
+    acquiring_party: "Bewi ASA",
+    target: "Jackon Holding AS",
+    summary: "Konkurransetilsynet godkjente Bewis oppkjop av Jackon pa vilkar om avhending. Bewi og Jackon var de storste aktorene i markedet for EPS-isolasjon.",
+    full_text: "Konkurransetilsynet fattet vedtak V2022-10 den 28. juni 2022 om inngrep pa vilkar mot Bewi ASAs erverv av Jackon Holding AS etter konkurranseloven paragraf 16 jf. paragraf 20. Bewi og Jackon var de storste produsentene av EPS-isolasjon (ekspandert polystyren) i Norge. Tilsynet godkjente fusjonen pa vilkar om avhending av virksomhet. Kjoper ble godkjent i V2022-21.",
+    outcome: "cleared_with_conditions",
+    turnover: null,
+  },
+  // 2022 — Skion/Enwa (vannbehandling)
+  {
+    case_number: "V2022-24-M",
+    title: "Skion Water International GmbH / Enwa AS — paalegg om meldeplikt (vannbehandling)",
+    date: "2022-12-22",
+    sector: "energy",
+    acquiring_party: "Skion Water International GmbH",
+    target: "Enwa AS",
+    summary: "Konkurransetilsynet pala Skion Water meldeplikt for ervervet av vannbehandlingsselskapet Enwa.",
+    full_text: "Konkurransetilsynet fattet vedtak V2022-24 den 22. desember 2022 om paalegg om meldeplikt for Skion Water International GmbHs erverv av Enwa AS etter konkurranseloven paragraf 18 tredje ledd.",
+    outcome: "notification_required",
+    turnover: null,
+  },
+  // 2024 — Infomedia/Retriever
+  {
+    case_number: "V2024-6-M",
+    title: "Infomedia A/S / Retriever Aktiebolag — paalegg om meldeplikt (medieovervakning)",
+    date: "2024-09-27",
+    sector: "media",
+    acquiring_party: "Infomedia A/S",
+    target: "Retriever Aktiebolag",
+    summary: "Konkurransetilsynet pala Infomedia/Retriever meldeplikt for den planlagte foretakssammenslutningen i medieovervakningsmarkedet.",
+    full_text: "Konkurransetilsynet fattet vedtak V2024-6 den 27. september 2024 om paalegg om meldeplikt for foretakssammenslutningen mellom Infomedia A/S og Retriever Aktiebolag etter konkurranseloven paragraf 18.",
+    outcome: "notification_required",
+    turnover: null,
+  },
+  // 2024 — Norwegian/Wideroe (henlagt)
+  {
+    case_number: "A2024-1-M",
+    title: "Norwegian Air Shuttle ASA / Wideroe AS — henleggelse av fusjonssak (luftfart)",
+    date: "2024-01-09",
+    sector: "transport",
+    acquiring_party: "Norwegian Air Shuttle ASA",
+    target: "Wideroe AS",
+    summary: "Konkurransetilsynet henla saken om Norwegians planlagte erverv av Wideroe.",
+    full_text: "Konkurransetilsynet fattet avgjorelse A2024-1 den 9. januar 2024 om henleggelse av saken mellom Norwegian Air Shuttle ASA og Wideroe AS etter konkurranseloven paragraf 20 jf. paragraf 16.",
+    outcome: "closed",
+    turnover: null,
+  },
+  // 2024 — TGS/PGS (henlagt)
+  {
+    case_number: "A2024-2-M",
+    title: "TGS Newco AS / PGS ASA — henleggelse av fusjonssak (seismikk)",
+    date: "2024-04-24",
+    sector: "offshore",
+    acquiring_party: "TGS Newco AS",
+    target: "PGS ASA",
+    summary: "Konkurransetilsynet henla saken om TGS' planlagte erverv av seismikkselskapet PGS.",
+    full_text: "Konkurransetilsynet fattet avgjorelse A2024-2 den 24. april 2024 om henleggelse av saken mellom TGS Newco AS og PGS ASA etter konkurranseloven paragraf 20 jf. paragraf 16.",
+    outcome: "closed",
+    turnover: null,
+  },
+  // 2023 — Nordea/Danske Bank (henlagt)
+  {
+    case_number: "A2023-4-M",
+    title: "Nordea Bank Abp / Danske Bank A/S norske privatkundevirksomhet — henleggelse (bank)",
+    date: "2023-12-20",
+    sector: "financial_services",
+    acquiring_party: "Nordea Bank Abp",
+    target: "Danske Bank A/S (norske privatkundevirksomhet)",
+    summary: "Konkurransetilsynet henla saken om Nordeas planlagte erverv av Danske Banks norske privatkundevirksomhet.",
+    full_text: "Konkurransetilsynet fattet avgjorelse A2023-4 den 20. desember 2023 om henleggelse av saken mellom Nordea Bank Abp og Danske Bank A/S' norske privatkundevirksomhet.",
+    outcome: "closed",
+    turnover: null,
+  },
+  // 2025 — Vygruppen/Flytoget (henlagt)
+  {
+    case_number: "A2025-1-M",
+    title: "Vygruppen AS / Flytoget AS — henleggelse av fusjonssak (jernbane)",
+    date: "2025-02-12",
+    sector: "transport",
+    acquiring_party: "Vygruppen AS",
+    target: "Flytoget AS",
+    summary: "Konkurransetilsynet henla saken om Vygruppens planlagte erverv av Flytoget.",
+    full_text: "Konkurransetilsynet fattet avgjorelse A2025-1 den 12. februar 2025 om henleggelse av saken mellom Vygruppen AS og Flytoget AS.",
+    outcome: "closed",
+    turnover: null,
+  },
+  // 2025 — NorgesGruppen/McKesson (apotek, henlagt)
+  {
+    case_number: "A2025-2-M",
+    title: "NorgesGruppen ASA / McKesson Norway AS — henleggelse av fusjonssak (apotek/helsedistribusjon)",
+    date: "2025-12-17",
+    sector: "healthcare",
+    acquiring_party: "NorgesGruppen ASA",
+    target: "McKesson Norway AS",
+    summary: "Konkurransetilsynet henla saken om NorgesGruppens planlagte erverv av McKesson Norway (apotek/helsedistribusjon).",
+    full_text: "Konkurransetilsynet fattet avgjorelse A2025-2 den 17. desember 2025 om henleggelse av saken mellom NorgesGruppen ASA og McKesson Norway AS etter konkurranseloven paragraf 20 jf. paragraf 16.",
+    outcome: "closed",
+    turnover: null,
+  },
+
+  // =========================================================================
+  // BATCH 2 — Phase 1 clearances (bulk of annual notifications)
+  // =========================================================================
+  // 2024 clearances
+  { case_number: "KT-2024-M-MESTERGRUPPEN", title: "Mestergruppen AS / BP Gruppen Norge AS — byggevaresammenslutning (avslag unntak)", date: "2024-05-24", sector: "construction", acquiring_party: "Mestergruppen AS", target: "BP Gruppen Norge AS (konkursbo)", summary: "Konkurransetilsynet avslo unntak fra gjennomforingsforbudet for Mestergruppens oppkjop fra konkursboet.", full_text: "Konkurransetilsynet fattet avgjorelse A2024-3 den 24. mai 2024 om avslag pa soknad om unntak fra gjennomforingsforbudet for Mestergruppen AS' erverv av BP Gruppen Norge AS (konkursbo) etter konkurranseloven paragraf 19.", outcome: "rejected", turnover: null },
+  // 2023 clearances
+  { case_number: "KT-2023-M-INDUSTRIKRAN", title: "Industrikran Holding AS / Munck Cranes AS — kransammenslutning (avslag unntak)", date: "2023-05-26", sector: "construction", acquiring_party: "Industrikran Holding AS", target: "Munck Cranes AS (konkursbo)", summary: "Avslag pa unntak fra gjennomforingsforbudet for Industrikrans oppkjop av Munck Cranes.", full_text: "Konkurransetilsynet fattet avgjorelse A2023-3 om avslag pa Industrikran Holding AS' soknad om unntak fra gjennomforingsforbudet for ervervet av Munck Cranes AS.", outcome: "rejected", turnover: null },
+  { case_number: "KT-2023-M-SKION-ENWA", title: "Skion Water International GmbH / Enwa AS — henleggelse (vannbehandling)", date: "2023-04-18", sector: "energy", acquiring_party: "Skion Water International GmbH", target: "Enwa AS", summary: "Konkurransetilsynet henla saken om Skion Waters erverv av Enwa etter innledende undersokelse.", full_text: "Konkurransetilsynet fattet avgjorelse A2023-2 om henleggelse av saken mellom Skion Water International GmbH og Enwa AS.", outcome: "closed", turnover: null },
+  { case_number: "KT-2023-M-AXESS-ATS", title: "Axess Logistics AS / Auto Transport Service AS (konkursbo) — henleggelse (biltransport)", date: "2023-01-12", sector: "transport", acquiring_party: "Axess Logistics AS", target: "Auto Transport Service AS (konkursbo)", summary: "Konkurransetilsynet henla saken om Axess Logistics' erverv av ATS' konkursbo.", full_text: "Konkurransetilsynet fattet avgjorelse A2023-1 om henleggelse av saken mellom Axess Logistics AS og Auto Transport Service AS' konkursbo.", outcome: "closed", turnover: null },
+  // 2022 clearances
+  { case_number: "KT-2022-M-BEWI-KJOPER", title: "Bewi ASA / Jackon Holding AS — godkjenning av kjoper og oppheving av gjennomforingsforbud", date: "2022-10-11", sector: "construction", acquiring_party: "Bewi ASA", target: "Jackon Holding AS (avhendingsvirksomhet)", summary: "Godkjenning av kjoper for Bewi/Jackons avhendingsvirksomhet etter V2022-10.", full_text: "Konkurransetilsynet fattet vedtak V2022-21 om godkjenning av kjoper og oppheving av gjennomforingsforbudet i Bewi/Jackon-saken.", outcome: "cleared_with_conditions", turnover: null },
+  // 2021 clearances
+  { case_number: "KT-2021-M-ALTIA-KJOPER", title: "Altia Plc / Arcus ASA — godkjenning av kjoper (spritmerker)", date: "2021-07-26", sector: "beverages", acquiring_party: "Altia Plc", target: "Arcus ASA (avhendingsmerker)", summary: "Godkjenning av kjoper for de avhendede spritmerkene etter V2021-7.", full_text: "Konkurransetilsynet fattet vedtak V2021-12 om godkjenning i forbindelse med Altia/Arcus-fusjonen.", outcome: "cleared_with_conditions", turnover: null },
+  // 2020 clearances
+  { case_number: "KT-2020-M-GJELSTEN-SPORT", title: "Gjelsten Holding AS / Sport 1 Gruppen AS / O.N. Sunde AS — sportsutstyrsammenslutning", date: "2020-09-29", sector: "retail", acquiring_party: "Gjelsten Holding AS", target: "Sport 1 Gruppen AS / O.N. Sunde AS", summary: "Konkurransetilsynet godkjente sammenslutning i det norske sportsutstyrsmarkedet.", full_text: "Konkurransetilsynet fattet avgjorelse A2020-2 om sammenslutningen mellom Gjelsten Holding AS, Sport 1 Gruppen AS og O.N. Sunde AS i sportsutstyrsmarkedet.", outcome: "cleared_phase1", turnover: null },
+  { case_number: "KT-2020-M-GRESVIG", title: "Gjelsten Holding/O.N. Sunde — Gresvig Retail Group AS (G-Sport/G-Max konkursbo)", date: "2020-02-26", sector: "retail", acquiring_party: "Gjelsten Holding AS / O.N. Sunde AS", target: "Gresvig Retail Group AS (konkursbo)", summary: "Oppkjop fra Gresvigs konkursbo (G-Sport, G-Max butikker).", full_text: "Konkurransetilsynet behandlet ervervet av Gresvig Retail Group AS' konkursbo (G-Sport, G-Max) av Gjelsten Holding/O.N. Sunde.", outcome: "cleared_phase1", turnover: null },
+  // 2019 clearances
+  { case_number: "KT-2019-M-TIETO-KJOPER", title: "Tieto Oyj / EVRY ASA — godkjenning av kjoper (sak- og arkiv)", date: "2019-11-29", sector: "digital_platforms", acquiring_party: "Tieto Oyj", target: "EVRY ASA (avhendingsvirksomhet)", summary: "Konkurransetilsynet godkjente Karbon Invest AS som kjoper av EVRYs sak- og arkivvirksomhet (V2019-24).", full_text: "Konkurransetilsynet fattet vedtak V2019-24 om godkjenning av kjoper og oppheving av gjennomforingsforbud i Tieto/EVRY-saken. Karbon Invest AS ble godkjent som kjoper.", outcome: "cleared_with_conditions", turnover: null },
+  { case_number: "KT-2019-M-NOR-TEKSTIL", title: "Nor Tekstil AS / Storvask AS — paalegg om meldeplikt (vaskeri)", date: "2019-10-11", sector: "waste", acquiring_party: "Nor Tekstil AS", target: "Storvask AS", summary: "Paalegg om meldeplikt for Nor Tekstils erverv av Storvask i vaskerimarkedet.", full_text: "Konkurransetilsynet fattet vedtak V2019-21 om paalegg om meldeplikt for Nor Tekstil AS' erverv av Storvask AS.", outcome: "notification_required", turnover: null },
+  { case_number: "KT-2019-M-JOTUNFJELL-VITA", title: "Jotunfjell Partners / Vita og Loco-konsernet — delvis unntak fra gjennomforingsforbud (detaljhandel)", date: "2019-10-22", sector: "retail", acquiring_party: "Jotunfjell Partners", target: "Vita og Loco-konsernet", summary: "Delvis unntak fra gjennomforingsforbudet for Jotunfjell/Vita.", full_text: "Konkurransetilsynet fattet avgjorelse A2019-1 om delvis unntak fra gjennomforingsforbudet for Jotunfjell Partners' erverv av Vita og Loco-konsernet.", outcome: "cleared_with_conditions", turnover: null },
+  // 2018 clearances
+  { case_number: "KT-2018-M-SECTOR-NOKAS-MELDING", title: "Sector Alarm AS / Nokas AS — paalegg om meldeplikt (alarmtjenester)", date: "2018-08-24", sector: "security", acquiring_party: "Sector Alarm AS / Sector Alarm Group AS", target: "Nokas AS", summary: "Paalegg om meldeplikt for Sector Alarms minoritetserverv i Nokas.", full_text: "Konkurransetilsynet fattet vedtak V2018-22 om paalegg om meldeplikt for Sector Alarm AS' minoritetserverv i Nokas AS.", outcome: "notification_required", turnover: null },
+  { case_number: "KT-2018-M-NOR-TEKSTIL-RENT", title: "Nor Tekstil AS / Rent Nordvest AS — paalegg om meldeplikt (vaskeri)", date: "2018-11-15", sector: "waste", acquiring_party: "Nor Tekstil AS", target: "Rent Nordvest AS", summary: "Paalegg om meldeplikt for Nor Tekstils erverv av Rent Nordvest.", full_text: "Konkurransetilsynet fattet vedtak V2018-25 om paalegg om meldeplikt for Nor Tekstil AS' erverv av Rent Nordvest AS.", outcome: "notification_required", turnover: null },
+  { case_number: "KT-2018-M-ST1-KJOPER", title: "St1 Norge AS / Bunker Oil AS — godkjenning av kjoper i drivstoffsaken", date: "2018-11-26", sector: "fuel", acquiring_party: "St1 Norge AS", target: "Bunker Oil AS (som kjoper av St1s norske virksomhet)", summary: "Godkjenning av Bunker Oil som kjoper i forbindelse med St1/Smart Fuel-vedtaket.", full_text: "Konkurransetilsynet fattet vedtak V2018-26 om godkjenning av Bunker Oil AS som kjoper av St1s eksisterende norske drivstoffvirksomhet.", outcome: "cleared_with_conditions", turnover: null },
+  // 2017 clearances
+  { case_number: "KT-2017-M-INSULA-APETIT", title: "Insula AS / Apetit Kala Oy / Maritim Food AS — henleggelse (sjomatforedling)", date: "2017-10-27", sector: "agriculture", acquiring_party: "Insula AS / Apetit Kala Oy", target: "Maritim Food AS", summary: "Henleggelse av saken om sjomatforedlingssammenslutning.", full_text: "Konkurransetilsynet fattet avgjorelse A2017-4 om henleggelse av saken mellom Insula AS/Apetit Kala Oy og Maritim Food AS.", outcome: "closed", turnover: null },
+  { case_number: "KT-2017-M-TELIA-PHONERO", title: "Telia Company AB / Phonero AS — henleggelse (mobiltelefoni)", date: "2017-04-07", sector: "telecommunications", acquiring_party: "Telia Company AB", target: "Phonero AS", summary: "Henleggelse av saken om Telias erverv av Phonero i mobilmarkedet.", full_text: "Konkurransetilsynet fattet avgjorelse A2017-1 om henleggelse av saken mellom Telia Company AB og Phonero AS.", outcome: "closed", turnover: null },
+  // 2015 clearances
+  { case_number: "KT-2015-M-INTERFLORA", title: "Interflora SA / Floriss Drift AS — blomsterhandel-sammenslutning", date: "2015-12-04", sector: "retail", acquiring_party: "Interflora SA", target: "Floriss Drift AS", summary: "Behandlet i fase 2 — Interfloras erverv av Floriss.", full_text: "Konkurransetilsynet fattet avgjorelse A2015-3 om Interflora SAs erverv av Floriss Drift AS i blomstermarkedet.", outcome: "cleared_phase1", turnover: null },
+  { case_number: "KT-2015-M-NG-TIGER-ESSO", title: "NorgesGruppen ASA / Tiger AS / Esso Norge AS — dagligvare/bensinstasjon", date: "2015-11-10", sector: "grocery", acquiring_party: "NorgesGruppen ASA", target: "Tiger AS / Esso Norge AS", summary: "NorgesGruppens erverv av kiosk-/dagligvarevirksomhet fra Esso.", full_text: "Konkurransetilsynet fattet avgjorelse A2015-2 om NorgesGruppen ASAs erverv av Tiger AS og virksomhet fra Esso Norge AS.", outcome: "cleared_phase1", turnover: null },
+  { case_number: "KT-2015-M-NETS-KORTACCEPT", title: "Nets Holding A/S / Kortaccept Nordic AB — betalingsinfrastruktur", date: "2015-09-23", sector: "financial_services", acquiring_party: "Nets Holding A/S", target: "Kortaccept Nordic AB", summary: "Sammenslutning i markedet for betalingsinfrastruktur.", full_text: "Konkurransetilsynet fattet avgjorelse A2015-1 om Nets Holding A/S' erverv av Kortaccept Nordic AB.", outcome: "cleared_phase1", turnover: null },
+  // 2014 clearances
+  { case_number: "KT-2014-M-NG-KONSUM", title: "NorgesGruppen Partner AS / Konsum Gruppen AS — dagligvaresammenslutning", date: "2014-11-21", sector: "grocery", acquiring_party: "NorgesGruppen Partner AS", target: "Konsum Gruppen AS", summary: "NorgesGruppens erverv av lokale dagligvarebutikker.", full_text: "Konkurransetilsynet fattet avgjorelse A2014-1 om NorgesGruppen Partner AS' erverv av Konsum Gruppen AS.", outcome: "cleared_phase1", turnover: null },
+  { case_number: "KT-2014-M-CAPPELEN-KONGSBERG", title: "Cappelen Holding AS / Kongsberg Esco AS — paalegg om meldeplikt", date: "2014-03-21", sector: "construction", acquiring_party: "Cappelen Holding AS", target: "Kongsberg Esco AS", summary: "Paalegg om meldeplikt for Cappelen/Kongsberg Esco.", full_text: "Konkurransetilsynet fattet vedtak V2014-4 om paalegg om meldeplikt for Cappelen Holding AS' erverv av Kongsberg Esco AS.", outcome: "notification_required", turnover: null },
+  // 2013 clearances
+  { case_number: "KT-2013-M-ORKLA-RIEBER", title: "Orkla ASA / Rieber & Son ASA — naeringsmiddelsammenslutning (godkjent)", date: "2013-04-26", sector: "grocery", acquiring_party: "Orkla ASA", target: "Rieber & Son ASA", summary: "Orklas erverv av Rieber & Son (Toro, Fun Light, Mr. Lee, Denja) — godkjent i fase 2 uten vilkar.", full_text: "Konkurransetilsynet fattet avgjorelse A2013-14 om Orkla ASAs erverv av Rieber & Son ASA. Orkla er Nordens storste merkevareselskap og Rieber & Son (Toro, Fun Light, Mr. Lee) var blant de storste norske naeringsmiddelselskapene. Godkjent etter fase 2-vurdering uten vilkar.", outcome: "cleared_phase2", turnover: 10_000_000_000 },
+  { case_number: "KT-2013-M-NOKAS-G4S", title: "Nokas AS / G4S International Holdings Limited — midlertidig gjennomforingsforbud (sikkerhet)", date: "2013-12-05", sector: "security", acquiring_party: "Nokas AS", target: "G4S International Holdings Limited", summary: "Midlertidig gjennomforingsforbud for Nokas' erverv av G4S' norske virksomhet.", full_text: "Konkurransetilsynet fattet vedtak V2013-13 om midlertidig gjennomforingsforbud for Nokas AS' erverv av G4S International Holdings Limiteds norske virksomhet.", outcome: "implementation_prohibition", turnover: null },
+  // 2012 clearances
+  { case_number: "KT-2012-M-AMEDIA-AGDERPOSTEN", title: "Amedia AS / Agderposten Medier AS — godkjenning av kjoper (lokalaviser)", date: "2012-10-31", sector: "media", acquiring_party: "Amedia AS (A-pressen/Edda)", target: "Agderposten Medier AS (avhendingsvirksomhet)", summary: "Godkjenning av kjoper for avhendede aviser etter A-pressen/Edda-fusjonen.", full_text: "Konkurransetilsynet fattet vedtak V2012-20 om godkjenning av kjoper i forbindelse med A-pressen/Edda Media-fusjonen.", outcome: "cleared_with_conditions", turnover: null },
+  // 2011 clearances
+  { case_number: "KT-2011-M-NETTBUSS-FJORD1", title: "Nettbuss AS / Fjord1 AS — midlertidig gjennomforingsforbud (busstransport)", date: "2011-11-01", sector: "transport", acquiring_party: "Nettbuss AS", target: "Fjord1 AS", summary: "Midlertidig gjennomforingsforbud for Nettbuss/Fjord1-sammenslutningen.", full_text: "Konkurransetilsynet fattet vedtak V2011-17 om midlertidig gjennomforingsforbud for Nettbuss AS' erverv av Fjord1 AS i busstransportmarkedet.", outcome: "implementation_prohibition", turnover: null },
+  // 2010 grocery meldeplikt
+  { case_number: "KT-2010-M-NG-MELDEPLIKT", title: "NorgesGruppen ASA — paalegg om meldeplikt for butikkerverv", date: "2010-11-19", sector: "grocery", acquiring_party: "NorgesGruppen ASA", target: "Diverse butikker", summary: "Konkurransetilsynet pala NorgesGruppen meldeplikt for erverv av dagligvarebutikker, ogsa under normal meldepliktterskel.", full_text: "Konkurransetilsynet fattet vedtak V2010-5 og V2010-6 om paalegg om meldeplikt for NorgesGruppen ASA og IK Lykke AS for erverv av dagligvarebutikker. Dette var en del av tilsynets overvaking av konsentrasjon i dagligvaremarkedet.", outcome: "notification_required", turnover: null },
+  { case_number: "KT-2010-M-DV-MELDEPLIKT", title: "Dagligvarekjedene — paalegg om generell meldeplikt (Rema, Coop, ICA, NorgesGruppen)", date: "2010-06-24", sector: "grocery", acquiring_party: "Rema 1000 / Coop / ICA / NorgesGruppen", target: "Alle dagligvareeierverv", summary: "Samlet paalegg om meldeplikt for de fire storste dagligvarekjedene for alle butikkerverv, uavhengig av størrelse.", full_text: "Konkurransetilsynet fattet vedtak V2010-1 til V2010-4 den 24. juni 2010 om paalegg om meldeplikt for de fire storste dagligvarekjedene: Rema 1000, Coop Norge Handel, ICA Norge og NorgesGruppen. Vedtakene krever at kjedene melder alle butikkerverv til tilsynet, ogsa oppkjop under de normale meldeplikttersklene.", outcome: "notification_required", turnover: null },
+  // 2009 clearances
+  { case_number: "KT-2009-M-STATKRAFT-AGDER", title: "Statkraft AS / Agder Energi AS — kraftsammenslutning (ikke-inngrep)", date: "2009-04-16", sector: "energy", acquiring_party: "Statkraft AS", target: "Agder Energi AS", summary: "Statkraft/Agder Energi vurdert — besluttet a ikke gripe inn.", full_text: "Konkurransetilsynet fattet avgjorelse A2009-20 om at det ikke var aktuelt med inngrep mot foretakssammenslutningen mellom Statkraft AS og Agder Energi AS i kraftmarkedet.", outcome: "cleared_phase1", turnover: null },
 ];
 
 const insertMerger = db.prepare(
@@ -2209,7 +3835,7 @@ const guidelines: GuidelineRow[] = [
       "Konkurransetilsynets markedsstudie av drivstoff- og ladeinfrastrukturmarkedene. Norge har verdens hoyeste andel elbiler. Studien dekker: (1) Drivstoffmarkedet — dominert av Circle K, Esso (ExxonMobil) og Uno-X. Priskonkurransen folger et mandag-fredag-monster. (2) Ladeinfrastruktur — aktorer som Mer (Statkraft), Recharge, Kempower og Tesla Supercharger. Etableringsbarrierer: tilgang til lokasjoner, nettilknytning og offentlige tilskudd. (3) Kryss-subsidier — vertikalt integrerte aktorer med bade bensinstasjoner og ladestasjoner. (4) Forbrukerhensyn — prisgennomsiktighet og interoperabilitet. Tilsynet anbefalte tiltak for rettferdig overgang til elektrisk mobilitet.",
   },
   {
-    doc_id: "KT-DRI-2014",
+    doc_id: "KT-DRI-2014-V2",
     title: "Drivstoffmarkedet i Norge — marginokning og ny pristopp",
     date: "2014-09-01",
     type: "market_study",
@@ -2591,7 +4217,7 @@ const guidelines: GuidelineRow[] = [
       "Konkurransetilsynets veileder for offentlige innkjopere om avdekking av anbudssamarbeid. Offentlige innkjop utgjor om lag 500 milliarder kroner arlig i Norge. Tegn pa anbudssamarbeid: (1) Identiske eller naert identiske tilbud. (2) Unnlatelse av a levere tilbud uten forklaring. (3) Tilbud som er vesentlig hoyere enn forventet. (4) Samme regneark-format eller likhet i skrivefeil pa tvers av tilbud. (5) Budmonstre som antyder rotasjon. (6) Uventede underentreprisekontrakter mellom konkurrenter. Hva innkjopere kan gjore: variere anbudskriterier, be om separate tilbud pa delkontrakter, sammenligne med historiske priser, melde mistanke til Konkurransetilsynet. Eksempler fra tilsynets praksis: El Proffen-saken (V2017-21), asfaltkartellsaken (V2013-3) og Johny Birkeland/Lindum-saken (V2016-7).",
   },
   {
-    doc_id: "KT-ARSRAPPORT-2024",
+    doc_id: "KT-ARSRAPPORT-2024-V2",
     title: "Konkurransetilsynets arsrapport 2024",
     date: "2025-03-01",
     type: "market_study",
@@ -2601,7 +4227,7 @@ const guidelines: GuidelineRow[] = [
       "Konkurransetilsynets arsrapport 2024 oppsummerer tilsynets virksomhet. Nokkeltall: 151 fusjonsnotifikasjoner mottatt, 98 % avgjort innen 25 virkedager (fase 1). 455 tips om mulig konkurransebegrensende adferd mottatt. Vedtak om overtredelsesgebyr pa 4,9 milliarder kroner til dagligvarekjedene (V2024-4). Forbud mot Norva24/Vitek-fusjonen (V2024-5). Avsluttet undersokelse i apotekmarkedet. Startet undersokelse i kjoreskolemarkedet med uanmeldte kontroller i november. Markedsstudier av drivstoff- og lademarkedet og eiendomsmeglerbransjen publisert. Budsjett: ca. 190 millioner kroner. Ansatte: ca. 155 arsverk. Hovedkontor: Bergen.",
   },
   {
-    doc_id: "KT-ARSRAPPORT-2023",
+    doc_id: "KT-ARSRAPPORT-2023-V2",
     title: "Konkurransetilsynets arsrapport 2023",
     date: "2024-03-01",
     type: "market_study",
@@ -2611,7 +4237,7 @@ const guidelines: GuidelineRow[] = [
       "Konkurransetilsynets arsrapport 2023 oppsummerer: 113 fusjonsnotifikasjoner. OB Group/Betongvarer-forbudet (V2023-3) i betongmarkedet. Hoyesterettsdommen HR-2023-299-A i Schibsted/Nettbil-saken (tilsynet tapte). Konkurranseklagenemnda opphevet bokbransjvedtaket V2022-18 (545 MNOK). Fortsatt undersokelse av dagligvarekjedene (ledet til V2024-4). Markedsstudier av digitale plattformer.",
   },
   {
-    doc_id: "KT-ARSRAPPORT-2022",
+    doc_id: "KT-ARSRAPPORT-2022-V2",
     title: "Konkurransetilsynets arsrapport 2022",
     date: "2023-03-01",
     type: "market_study",
@@ -2683,7 +4309,7 @@ const guidelines: GuidelineRow[] = [
     full_text: "Konkurransetilsynets dagligvarerapport 2015 analyserer det norske dagligvaremarkedet etter den banebrytende Coop/ICA-fusjonen (V2015-24). Rapporten dekker den nye markedsstrukturen der Coop overtok ICAs ca. 550 butikker og vokste til a bli Norges nest storste dagligvarekjede. Avhending av 93 butikker til Bunnpris og NorgesGruppen beskrives. Markedsandeler etter fusjonen: NorgesGruppen ca. 44 %, Coop ca. 30 %, Rema ca. 24 %, Bunnpris ca. 4 %.",
   },
   {
-    doc_id: "KT-ARSRAPPORT-2021",
+    doc_id: "KT-ARSRAPPORT-2021-V2",
     title: "Konkurransetilsynets arsrapport 2021",
     date: "2022-03-01",
     type: "market_study",
@@ -2691,7 +4317,7 @@ const guidelines: GuidelineRow[] = [
     full_text: "Konkurransetilsynets arsrapport 2021 oppsummerer: DNB/Sbanken-forbudet (V2021-13). Konkurranseklagenemnda opprettholdt Schibsted/Nettbil-forbudet. Fortsatt oppfolging av dagligvarevarselet fra desember 2020. Uanmeldte kontroller i apotekmarkedet (mai 2021). Fornyelse av Vipps-tilgangsvilkar (V2021-5). 105 fusjonsnotifikasjoner mottatt.",
   },
   {
-    doc_id: "KT-ARSRAPPORT-2020",
+    doc_id: "KT-ARSRAPPORT-2020-V2",
     title: "Konkurransetilsynets arsrapport 2020",
     date: "2021-03-01",
     type: "market_study",
@@ -2850,6 +4476,410 @@ const guidelines: GuidelineRow[] = [
     summary: "Veileder om konkurransenøytralitet mellom offentlig eide og private foretak. Staten, kommuner og fylkeskommuner eier mange store foretak i Norge.",
     full_text: "Konkurransetilsynets veileder om offentlig eierskap og konkurransenøytralitet. Norge har et hoyt niva av offentlig eierskap: staten eier andeler i Equinor, Telenor, DNB, Vy og flere. Kommuner eier kraftselskaper, renovasjonsselskaper og infrastruktur. (1) Konkurransenøytralitet — offentlig eide foretak skal konkurrere pa like vilkar som private. (2) Kryssubsidiering — offentlige foretak ma ikke bruke inntekter fra monopolvirksomhet til a subsidiere konkurranseutsatt virksomhet. (3) Statsstotte — reglene om offentlig stotte i EOS-avtalens artikkel 61 er relevante. (4) Eksempler — kraftselskapenes rolle i lademarkedet, kommunale renovasjonsselskaper vs. private aktorer.",
   },
+
+  // =========================================================================
+  // EXPANSION — Additional reports, annual reports, and publications
+  // =========================================================================
+
+  // -------------------------------------------------------------------------
+  // ARSRAPPORTER (Annual reports) — 2010-2024
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-ARSRAPPORT-2024-V2",
+    title: "Konkurransetilsynets arsrapport 2024",
+    date: "2025-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2024. 151 fusjonsnotifikasjoner. Dagligvaresaken (4,9 mrd. kr), Norva24/Vitek-forbud, Schlumberger/ChampionX pa vilkar, Infomedia/Retriever-paalegg.",
+    full_text: "Konkurransetilsynets arsrapport 2024 oppsummerer: Dagligvaresaken — 4,9 milliarder kroner i overtredelsesgebyr til Coop, NorgesGruppen og Rema 1000 (V2024-4, storste gebyret noensinne). Norva24 Vest/Vitek Miljo-forbudet (V2024-5). Schlumberger/ChampionX godkjent pa vilkar (V2025-1). Infomedia/Retriever palagt meldeplikt (V2024-6). 151 fusjonsnotifikasjoner mottatt, 98 prosent avgjort innen 25 virkedager.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2023-V2",
+    title: "Konkurransetilsynets arsrapport 2023",
+    date: "2024-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2023. OB Group/Betongvarer-forbud, Schibsted/Nettbil Hoyesterettsdom. 113 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2023 oppsummerer: OB Group/Betongvarer-forbudet (V2023-3). Hoyesterett avsa dom i Schibsted/Nettbil-saken (HR-2023-299-A) og opphevet forbudet. Konkurranseklagenemnda opphevet bokbransjvedtaket (V2022-18/V2022-23). 113 fusjonsnotifikasjoner mottatt.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2022-V2",
+    title: "Konkurransetilsynets arsrapport 2022",
+    date: "2023-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2022. Bokbransjvedtaket (545 MNOK), Foodora-vedtak, Bewi/Jackon, Royal Unibrew/Hansa Borg. 120 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2022 oppsummerer: Bokbransjvedtaket — 545 millioner kroner til fire forlag og Bokbasen (V2022-18/V2022-23). Foodora-vedtaket (V2022-1) om opphor av eksklusivavtaler. Bewi/Jackon godkjent pa vilkar (V2022-10). Royal Unibrew/Hansa Borg godkjent pa vilkar (V2022-4). Nortura/Steinsland godkjent pa vilkar (V2022-8). 120 fusjonsnotifikasjoner mottatt.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2021-V2",
+    title: "Konkurransetilsynets arsrapport 2021",
+    date: "2022-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2021. DNB/Sbanken-forbud (V2021-13), Altia/Arcus pa vilkar, NorgesGruppen V2020-25 opphevet. 130 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2021 oppsummerer: DNB/Sbanken-forbudet (V2021-13, senere opphevet av Konkurranseklagenemnda). Altia/Arcus (Anora) godkjent pa vilkar (V2021-7). NorgesGruppen-vedtaket V2020-25 opphevet (V2021-4). Verisure betalte gebyr pa 766 MNOK etter nemndsvedtak. 130 fusjonsnotifikasjoner mottatt.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2020-V2",
+    title: "Konkurransetilsynets arsrapport 2020",
+    date: "2021-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2020. Verisure 766 MNOK gebyr, Schibsted/Nettbil-forbud, Circle K/YX-vedtak, NorgesGruppen 20 MNOK. Covid-19 unntak. 110 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2020 oppsummerer: Verisure ilagt 766 millioner kroner (V2020-32). Schibsted/Nettbil-forbudet (V2020-31). Circle K og YX vedtak om drivstoffpriser (V2020-26, V2020-27). NorgesGruppen ilagt 20 MNOK for opplysningsplikt (V2020-25). Ringnes — vedtak om forpliktelser (V2020-20). Covid-19 midlertidige unntak for transport og luftfart. 110 fusjonsnotifikasjoner mottatt.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2014",
+    title: "Konkurransetilsynets arsrapport 2014",
+    date: "2015-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2014. SATS/ELIXIA fusjon, Norsk Gjenvinning/Avfall Sor forbud, Nortura/Prima Slakt. Coop/ICA meldt november 2014.",
+    full_text: "Konkurransetilsynets arsrapport 2014 oppsummerer: SATS/ELIXIA-fusjonen godkjent pa vilkar (V2014-2). Norsk Gjenvinning/Avfall Sor Bedrift-forbudet (V2014-9). Nortura/Prima Slakt godkjent pa vilkar (V2014-13). Coop/ICA-meldingen mottatt november 2014 (senere vedtatt V2015-24). Ca. 85 fusjonsnotifikasjoner.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2013",
+    title: "Konkurransetilsynets arsrapport 2013",
+    date: "2014-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2013. NCC asfaltgebyr 140 MNOK, Orkla/Rieber fusjon, Retriever/Innholdsutvikling-forbud, mange gjennomforingsforbuds-gebyrer.",
+    full_text: "Konkurransetilsynets arsrapport 2013 oppsummerer: NCC Roads ilagt 140 MNOK for asfaltsamarbeid (V2013-3). Orkla/Rieber & Son godkjent uten vilkar. Retriever/Innholdsutvikling-forbudet (V2013-5). Nor Tekstil/Sentralvaskeriene-forbudet (V2013-1). Nokas/G4S gjennomforingsforbud. Mange vedtak om brudd pa gjennomforingsforbudet. Ca. 80 fusjonsnotifikasjoner.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2012",
+    title: "Konkurransetilsynets arsrapport 2012",
+    date: "2013-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2012. A-pressen/Edda Media fusjon, Telenor/LOS Bynett, Mekonomen/Meca, mange gjennomforingsgebyrer (6 stk). Ca. 75 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2012 oppsummerer: A-pressen/Edda Media-fusjonen godkjent pa vilkar (V2012-11, dannet Amedia). Telenor/LOS Bynett inngrep i bredbandmarkedet (V2012-8). Mekonomen/Meca inngrep i bildelemarkedet (V2012-10). Plantasjen/Oddernes forbud (V2012-18). Seks vedtak om gjennomforingsgebyr (Lyse, Deloitte, Valora, Veidekke m.fl.). Ca. 75 fusjonsnotifikasjoner.",
+  },
+  {
+    doc_id: "KT-ARSRAPPORT-2010",
+    title: "Konkurransetilsynets arsrapport 2010",
+    date: "2011-03-01",
+    type: "market_study",
+    summary: "Arsrapport 2010. Overvakning av dagligvaremarkedet (meldeplikt Rema, Coop, ICA, NorgesGruppen). Ca. 70 fusjonsnotifikasjoner.",
+    full_text: "Konkurransetilsynets arsrapport 2010 oppsummerer: Innforing av utvidet meldeplikt for de fire storste dagligvarekjedene (V2010-1 til V2010-6). Overvakning av drivstoff- og dagligvaremarkedet. Ca. 70 fusjonsnotifikasjoner mottatt.",
+  },
+
+  // -------------------------------------------------------------------------
+  // DAGLIGVARERAPPORTER — additional years
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-DV-2024-MARGINSTUDIE-1",
+    title: "Marginstudie dagligvare del 1 — lonnsomhet hos dagligvareaktoerene 2017-2022",
+    date: "2024-05-08",
+    type: "market_study",
+    summary: "Del 1 av Konkurransetilsynets marginstudie som analyserer lonnsomheten hos dagligvareaktorer fra 2017 til 2022, inkludert pandemi- og krigsperioden.",
+    full_text: "Konkurransetilsynets marginstudie del 1 analyserer lonnsomheten hos aktorer i den norske dagligvarekjeden fra 2017 til 2022. Studien dekker perioden gjennom Covid-19 pandemien og konsekvensene av Russlands invasjon av Ukraina. Rapporten undersøker bruttofortjeneste, driftsresultat og avkastning hos dagligvarekjeder, grossister og leverandorer.",
+  },
+  {
+    doc_id: "KT-DV-2024-MARGINSTUDIE-2",
+    title: "Marginstudie dagligvare del 2 — produktniva-analyse 2020-2023",
+    date: "2025-01-15",
+    type: "market_study",
+    summary: "Del 2 av marginstudien. Analyse pa produktniva for dagligvaresektoren 2020-2023, inkludert sammenligning av egne merkevarer (EMV) og leverandormerker.",
+    full_text: "Konkurransetilsynets marginstudie del 2 analyserer marginer pa produktniva i dagligvaresektoren for perioden 2020-2023. Rapporten sammenligner marginer pa egne merkevarer (EMV) og leverandormerker (branded products), og undersøker om pandemi- og krigsrelaterte prisokninger har resultert i varige marginendringer.",
+  },
+  {
+    doc_id: "KT-DV-2023-PRISJUSTERING",
+    title: "Utredning om prisjusteringsvinduer i dagligvaremarkedet 2023",
+    date: "2023-06-01",
+    type: "market_study",
+    summary: "Utredning om prisjusteringsvinduer — periodene der dagligvarekjedene og leverandorer forhandler priser pa dagligvarer.",
+    full_text: "Konkurransetilsynets utredning om prisjusteringsvinduer i dagligvaremarkedet. Prisjusteringsvinduer er periodene der dagligvarekjedene (NorgesGruppen, Coop, Rema) og leverandorer forhandler innkjopspriser og handelsvilkar. Rapporten analyserer om tidspunktene og strukturen pa forhandlingene pavirker konkurransen og prisene til forbrukerne.",
+  },
+  {
+    doc_id: "KT-DV-2022-INNKJOP",
+    title: "Kartlegging av innkjopsbetingelser i dagligvaresektoren 2022",
+    date: "2022-06-01",
+    type: "market_study",
+    summary: "Kartlegging av innkjopsbetingelser og rabattstrukturer mellom dagligvarekjeder og leverandorer for 2020-2021.",
+    full_text: "Konkurransetilsynets kartlegging av innkjopsbetingelser i dagligvaresektoren for 2020-2021. Rapporten undersøker rabattstrukturer, fellesmarkedsforingsmidler og andre handelsvilkar mellom de tre store kjedene (NorgesGruppen, Coop, Rema) og deres leverandorer.",
+  },
+  {
+    doc_id: "KT-DV-2020-INNKJOP",
+    title: "Kartlegging av innkjopsbetingelser i dagligvaresektoren 2020",
+    date: "2020-10-08",
+    type: "market_study",
+    summary: "Kartlegging av innkjopsbetingelser for 2018-2019.",
+    full_text: "Konkurransetilsynets kartlegging av innkjopsbetingelser i dagligvaresektoren for 2018-2019.",
+  },
+  {
+    doc_id: "KT-DV-2019-INNKJOP",
+    title: "Kartlegging av innkjopsbetingelser i dagligvaresektoren 2019",
+    date: "2019-11-13",
+    type: "market_study",
+    summary: "Detaljert analyse av innkjopsbetingelser og leverandorforhold i dagligvaremarkedet for 2017.",
+    full_text: "Konkurransetilsynets detaljerte kartlegging av innkjopsbetingelser i dagligvaresektoren for 2017.",
+  },
+
+  // -------------------------------------------------------------------------
+  // DRIVSTOFFRAPPORTER (Fuel market reports)
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-DRI-2010",
+    title: "Det norske drivstoffmarkedet — prisvariasjoner og geografiske forskjeller",
+    date: "2010-01-01",
+    type: "market_study",
+    summary: "Konkurransetilsynets analyse av prisvariasjon og geografiske forskjeller i det norske drivstoffmarkedet.",
+    full_text: "Konkurransetilsynets rapport om det norske drivstoffmarkedet med fokus pa prisvariasjon og geografiske forskjeller mellom ulike omrader. Rapporten analyserer markedsstrukturen med Circle K (davarende Statoil), Esso, Uno-X og Shell som de storste aktorene.",
+  },
+  {
+    doc_id: "KT-DRI-2014-V2",
+    title: "Drivstoffmarkedet i Norge — marginokning og ny pristopp",
+    date: "2014-01-01",
+    type: "market_study",
+    summary: "Analyse av bruttomarginer i drivstoffmarkedet. Marginene okte fra relativt stabilt niva pa 2000-tallet til nye hoyder fra 2005 til 2011.",
+    full_text: "Konkurransetilsynets rapport om drivstoffmarkedet i Norge med fokus pa marginokning. Bruttomarginer var pa et relativt stabilt niva pa begynnelsen av 2000-tallet, men okte betydelig fra 2005 til 2011. Det ukentlige prismonsteret (hoye priser mandager, lave fredager) beskrives.",
+  },
+
+  // -------------------------------------------------------------------------
+  // ADDITIONAL MARKET STUDIES AND SECTOR REPORTS
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-MS-ALGORITMER-2021",
+    title: "Algoritmer og konkurranse — overvakning og prisalgoritmer i dagligvare",
+    date: "2021-02-03",
+    type: "market_study",
+    summary: "Konkurransetilsynets rapport om bruk av overvakning- og prisalgoritmer i dagligvaremarkedet og risikoen for konkurranseskadelig adferd.",
+    full_text: "Konkurransetilsynets rapport om algoritmer og konkurranse (2021). Rapporten undersøker bruken av overvaknings- og prisalgoritmer i det norske dagligvaremarkedet. Algoritmisk prissetting kan fasilitere stilltiende samarbeid (tacit collusion) i konsentrerte markeder. I et marked med tre dominerende kjeder (NorgesGruppen, Coop, Rema) er risikoen for koordinerte effekter hoy. Rapporten advarer mot bruk av felles prisovervakningsverktoey og automatiserte prismatchingsalgoritmer.",
+  },
+  {
+    doc_id: "KT-MS-PETROLEUMSKJOPERMAKT-2016",
+    title: "Petroleumsnaeringen og kjopermakt — analyse av innkjopspraksis",
+    date: "2016-10-03",
+    type: "market_study",
+    summary: "Analyse av kjopermakt i petroleumsnaeringens forsyningskjede pa norsk sokkel.",
+    full_text: "Konkurransetilsynets rapport om kjopermakt i petroleumsnaeringen. Rapporten analyserer innkjopspraksis og forhandlingsdynamikk mellom oljeselskaper og leverandorer pa norsk sokkel. Store oljeselskaper (Equinor, Shell, ConocoPhillips) har betydelig kjopermakt overfor leverandorindustrien.",
+  },
+  {
+    doc_id: "KT-MS-AVFALL-NORDISK-2016",
+    title: "Konkurranseproblemer i det nordiske avfallsmarkedet",
+    date: "2016-02-23",
+    type: "market_study",
+    summary: "Nordisk rapport om konkurranseproblemer i avfallssektoren, utarbeidet i samarbeid mellom de nordiske konkurransemyndighetene.",
+    full_text: "Nordisk rapport om konkurranseproblemer i avfallsmarkedene i Norge, Sverige, Danmark og Finland. Rapporten identifiserer felles utfordringer: kommunale monopoler, kryssubsidiering, og barrierer for private aktorer. I Norge er avfallssektoren preget av bade kommunale og private aktorer.",
+  },
+  {
+    doc_id: "KT-MS-BOLIGLAN-2015",
+    title: "Sarbar konkurranse i boliglanmarkedet",
+    date: "2015-03-24",
+    type: "market_study",
+    summary: "Analyse av konsentrasjon og konkurranse i det norske boliglanmarkedet. DNB er storst med om lag 30 prosent markedsandel.",
+    full_text: "Konkurransetilsynets rapport om konkurranse i boliglanmarkedet. DNB har om lag 30 prosent av boliglanmarkedet, etterfulgt av SpareBank 1-alliansen og Nordea. Rapporten vurderer barrierer for a bytte bank, effekten av rentesignalering og behovet for styrket kundemobilitet.",
+  },
+  {
+    doc_id: "KT-MS-BOLIGUTVIKLING-2015",
+    title: "Konkurranseproblemer for boligutvikling",
+    date: "2015-02-10",
+    type: "market_study",
+    summary: "Analyse av etableringshindringer og konkurranse i boligutvikling og tomtemarkedet.",
+    full_text: "Konkurransetilsynets rapport om konkurranseproblemer i boligutvikling. Rapporten analyserer etableringshindringer i tomtemarkedet og reguleringsplanprosessen. Plan- og bygningsloven og kommunale reguleringsplaner kan begrense konkurransen mellom utbyggere.",
+  },
+  {
+    doc_id: "KT-MS-DROSJE-2015",
+    title: "Drosjenaringen ma fa moderne rammebetingelser",
+    date: "2015-03-20",
+    type: "market_study",
+    summary: "Konkurransetilsynets anbefalinger om deregulering av drosjemarkedet — behovsprøving, enerettsomrader og prisregulering bor oppheves.",
+    full_text: "Konkurransetilsynets rapport om drosjenaringen (2015). Tilsynet anbefaler omfattende deregulering: (1) Behovsprøving av loyver bor oppheves. (2) Enerettsomrader bor avvikles. (3) Maksimalprisreguleringen bor fjernes i byer. (4) Plattformselskaper som Uber og Bolt bor fa tilgang. (5) Teknologiske losninger kan erstatte tradisjonelle taksametere. Mange av anbefalingene ble gjennomfort i drosjeliberaliseringen i 2020.",
+  },
+  {
+    doc_id: "KT-MS-PENSJON-2010",
+    title: "Konkurransen i markedet for offentlig tjenestepensjon",
+    date: "2010-01-01",
+    type: "market_study",
+    summary: "Analyse av konkurransen i markedet for offentlig tjenestepensjon i Norge.",
+    full_text: "Konkurransetilsynets rapport om konkurransen i markedet for offentlig tjenestepensjon. Rapporten analyserer markedsstruktur, tilbyderkonsentrasjon og barrierer for bytte av pensjonsleverandor for offentlige virksomheter.",
+  },
+  {
+    doc_id: "KT-MS-KONKURRANSEN-NORGE-2009",
+    title: "Konkurransen i Norge — seks markedsanalyser",
+    date: "2009-01-01",
+    type: "market_study",
+    summary: "Konkurransetilsynets brede analyse av konkurransesituasjonen i seks markeder i Norge.",
+    full_text: "Konkurransetilsynets rapport om konkurransesituasjonen i seks sentrale norske markeder. Rapporten gir en oversikt over markedsstrukturer, konsentrasjon og konkurranseproblematikk pa tvers av sektorer.",
+  },
+  {
+    doc_id: "KT-MS-SKADEFORSIKRING-2006",
+    title: "Skadeforsikring — markedsanalyse",
+    date: "2006-01-01",
+    type: "market_study",
+    summary: "Analyse av det norske skadeforsikringsmarkedet. Gjensidige, If og Tryg er de storste aktorene.",
+    full_text: "Konkurransetilsynets analyse av det norske skadeforsikringsmarkedet. Gjensidige er storst, etterfulgt av If og Tryg. Rapporten vurderer konsentrasjon, kundebyttekostnader og produktdifferensiering.",
+  },
+  {
+    doc_id: "KT-MS-BOKPRIS-2006",
+    title: "Effekter av friere bokpriser",
+    date: "2006-01-01",
+    type: "market_study",
+    summary: "Analyse av effektene av opphevelsen av fastpris pa boker (Bokavtalen) i Norge.",
+    full_text: "Konkurransetilsynets analyse av effektene av friere bokpriser etter endringer i Bokavtalen. Rapporten undersøker om friere prising har fort til lavere bokpriser og storre utvalg for forbrukerne.",
+  },
+  {
+    doc_id: "KT-MS-HYLLEPLASS-2005",
+    title: "Betaling for hylleplass — analyse av dagligvarekjedenes makt",
+    date: "2005-01-01",
+    type: "market_study",
+    summary: "Analyse av dagligvarekjedenes bruk av hylleplassbetaling og fellesmarkedsforingsmidler som konkurransevirkemiddel.",
+    full_text: "Konkurransetilsynets rapport om betaling for hylleplass i dagligvarehandelen (2005). Rapporten analyserer hvordan de store dagligvarekjedene bruker hylleplassbetaling, fellesmarkedsforingsmidler og andre handelsvilkar i sin maktposisjon overfor leverandorer.",
+  },
+  {
+    doc_id: "KT-MS-LIKVILKAR-2005",
+    title: "Pa like vilkar? — offentlige og private aktorer i konkurranse",
+    date: "2005-01-01",
+    type: "market_study",
+    summary: "Analyse av konkurransevilkar mellom offentlige og private aktorer — kryssubsidiering og skattefordeler.",
+    full_text: "Konkurransetilsynets rapport om like konkurransevilkar mellom offentlige og private aktorer. Rapporten undersøker om offentlige virksomheter har urettmessige fordeler (skattefritak, garantier, kryssubsidiering) som forvrenger konkurransen.",
+  },
+
+  // -------------------------------------------------------------------------
+  // ADDITIONAL GUIDELINES AND VEILEDERS
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-GL-FUSJONSKONTROLL-VEILEDER",
+    title: "Veileder til saksbehandlingen ved kontroll med foretakssammenslutninger",
+    date: "2017-12-22",
+    type: "guideline",
+    summary: "Detaljert veileder om fusjonskontrollprosessen: meldeplikt, terskler, faser, vilkar og gjennomforingsforbud.",
+    full_text: "Konkurransetilsynets veileder til saksbehandlingen ved kontroll med foretakssammenslutninger (fusjonskontroll). (1) Meldeplikt — foretakssammenslutninger over omsetningstersklene (1 mrd. kr kombinert / 100 MNOK for minst to parter) skal meldes. (2) Fase 1 — tilsynet har 25 virkedager fra komplett melding. 98 prosent avgjores her. (3) Fase 2 — utvidet undersokelse, inntil 45 virkedager ekstra. (4) Vilkar — strukturelle (avhending) eller atferdsmessige forpliktelser. (5) Gjennomforingsforbud — sammenslutningen kan ikke gjennomfores for den er godkjent. (6) Paalegg om meldeplikt — tilsynet kan palegge meldeplikt for oppkjop under tersklene (§ 18).",
+  },
+  {
+    doc_id: "KT-GL-PRISDISKRIMINERING",
+    title: "Veileder om prisdiskriminering i konkurranseretten",
+    date: "2022-07-06",
+    type: "guideline",
+    summary: "Veileder om nar prisdiskriminering utgjor misbruk av dominerende stilling etter konkurranseloven paragraf 11.",
+    full_text: "Konkurransetilsynets veileder om prisdiskriminering (2022). Veilederen forklarer nar prisdiskriminering kan utgjore misbruk av dominerende stilling: (1) Forskjell i pris ma ha negativ effekt pa konkurransen. (2) Lik ytelse ma behandles likt (like tilfeller). (3) Objektivt rettferdiggjort prisforskjell er tillatt. (4) Rabattsystemer som binder kunder eksklusivt kan utgjore misbruk. (5) Relevant for dagligvare (innkjopsbetingelser) og drivstoff (listeprisystemer).",
+  },
+  {
+    doc_id: "KT-GL-ANMELDELSE-PERSONER",
+    title: "Veileder om anmeldelse av personer ved overtredelser av konkurranseloven paragraf 10",
+    date: "2024-03-22",
+    type: "guideline",
+    summary: "Veileder om Konkurransetilsynets adgang til a anmelde fysiske personer for strafferettslig forfølgning ved kartellovertredelser.",
+    full_text: "Konkurransetilsynets veileder om anmeldelse av personer ved overtredelser av konkurranseloven paragraf 10 (kartellforbud). Veilederen forklarer: (1) Strafferamme — konkurranseloven paragraf 32 gir adgang til fengselsstraff inntil 3 ar for deltakelse i karteller. (2) Vilkar — forsettlig eller grovt uaktsom overtredelse. (3) Prioritering — tilsynet prioriterer anmeldelse av ledende personer i alvorlige kartellsaker. (4) Lempning — personer kan ogsa soke om lempning fra straffeforfolging.",
+  },
+  {
+    doc_id: "KT-GL-LEMPNING",
+    title: "Veileder om lempning (amnesti) i kartellsaker",
+    date: "2014-01-01",
+    type: "guideline",
+    summary: "Veileder om Konkurransetilsynets lempningsprogram der foretak som avslorer karteller kan fa redusert eller fullt frafall av overtredelsesgebyr.",
+    full_text: "Konkurransetilsynets veileder om lempning i kartellsaker. (1) Full lempning — forste foretak som avslorer et kartell og samarbeider fullt ut kan fa fullt frafall av gebyret. (2) Delvis lempning — etterfølgende foretak kan fa reduksjon pa opptil 50 prosent. (3) Vilkar — foretaket ma opphore med overtredelsen, samarbeide fullt ut og ikke ha initiert kartellet. (4) Veidekke fikk full lempning i asfaltsaken (V2013-3). (5) Forholdet til straffeforfolging — lempning gjelder kun overtredelsesgebyr, ikke personlig straffansvar.",
+  },
+  {
+    doc_id: "KT-GL-FORLIK",
+    title: "Veileder om forlik (settlement) i kartellsaker",
+    date: "2016-07-01",
+    type: "guideline",
+    summary: "Veileder om forliksordningen innfort i 2016 der foretak som innrommer skyld far 10 prosent reduksjon i gebyret.",
+    full_text: "Konkurransetilsynets veileder om forliksordningen i kartellsaker, innfort 1. juli 2016. Foretak som innrommer skyld og godtar forlik med Konkurransetilsynet far 10 prosent reduksjon i overtredelsesgebyret. (1) Sector Alarm benyttet forlik i alarmmarkedsdelingssaken (V2019-18, 467,3 MNOK). (2) Prosessen — tilsynet sender varsel, partene kan velge forlik. (3) Tidsbesparelse — forlik reduserer saksbehandlingstiden.",
+  },
+
+  // -------------------------------------------------------------------------
+  // HORINGSUTTALELSER (selected important hearing statements)
+  // -------------------------------------------------------------------------
+  {
+    doc_id: "KT-HORING-NOU-2025-11",
+    title: "Horingsuttalelse — NOU 2025:11 Revidert konkurranselov",
+    date: "2026-03-26",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse til den storste revisjonen av konkurranseloven siden 2004. Markedsundersokelser, forlik, utvidet gebyrhjemmel og ledelsesforbud foreslatt.",
+    full_text: "Konkurransetilsynets horingsuttalelse til NOU 2025:11 Revidert konkurranselov. Den foreslatte revisjonen er den mest omfattende siden loven ble vedtatt i 2004. Viktige forslag: (1) Ny hjemmel for markedsundersokelser — tilsynet kan iverksette sektor-undersokelser og palegge strukturelle eller atferdsmessige tiltak. (2) Utvidet forliksordning. (3) Ledelsesforbud (ledelseskarantene) for fysiske personer som deltar i karteller. (4) Utvidet overtredelsesgebyrhjemmel. (5) Styrket fusjonskontroll med lavere terskler.",
+  },
+  {
+    doc_id: "KT-HORING-DROSJEUTVALG-2024",
+    title: "Horingsuttalelse — NOU 2024:15 En bedre regulert drosjenaering",
+    date: "2024-10-04",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse til Drosjeutvalgets forslag om re-regulering av drosjemarkedet etter 2020-liberaliseringen.",
+    full_text: "Konkurransetilsynets horingsuttalelse til NOU 2024:15. Drosjeutvalget foreslar delvis re-regulering etter at dereguleringen i 2020 ikke har gitt forventet konkurranse i alle omrader. Tilsynet advarer mot for stram regulering som kan hindre plattformselskaper (Uber, Bolt) fra a konkurrere.",
+  },
+  {
+    doc_id: "KT-HORING-SPAREBANKER-2025",
+    title: "Horingsuttalelse — NOU 2024:22 Norske sparebanker — tradisjon og tilpasning",
+    date: "2025-02-03",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse om sparebankstrukturen og konkurransen i bankmarkedet.",
+    full_text: "Konkurransetilsynets horingsuttalelse til NOU 2024:22 om norske sparebanker. Tilsynet vurderer konsolidering i banknaringen og effektene pa konkurransen i lokale markeder.",
+  },
+  {
+    doc_id: "KT-HORING-DIGITALTJENESTER-2025",
+    title: "Horingsuttalelse — Forslag til lov om digitale tjenester (digitaltjenesteloven)",
+    date: "2025-10-01",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse til gjennomforing av EUs Digital Services Act i norsk rett.",
+    full_text: "Konkurransetilsynets horingsuttalelse til forslaget om ny lov om digitale tjenester (2025), som gjennomforer EUs Digital Services Act (DSA) i norsk rett. Tilsynet vurderer forholdet mellom den nye loven og konkurranseretten, saerlig knyttet til store plattformer (gatekeepers) og markedsposisjon.",
+  },
+  {
+    doc_id: "KT-HORING-ALTERNATIVT-DRIVSTOFF-2026",
+    title: "Horingsuttalelse — Ny lov om infrastruktur for alternativt drivstoff",
+    date: "2026-01-19",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse til lovforslaget om ladeinfrastruktur for elbiler og hydrogenstasjoner.",
+    full_text: "Konkurransetilsynets horingsuttalelse til forslag til ny lov om infrastruktur for alternativt drivstoff (2026). Tilsynet fokuserer pa konkurransen i lademarkedet: (1) Unnga monopoler i ladeinfrastruktur. (2) Tilgang til lading pa like vilkar. (3) Prisgennomsiktighet for ladepriser. (4) Forholdet mellom drivstoffkjeder og ladeoperatorer.",
+  },
+  {
+    doc_id: "KT-HORING-FLYRUTETILBUD-2025",
+    title: "Horingsuttalelse — utredning om det regionale flyrutetilbudet",
+    date: "2025-12-19",
+    type: "hearing_statement",
+    summary: "Konkurransetilsynets uttalelse om konkurranse pa regionale flyruter i Norge.",
+    full_text: "Konkurransetilsynets horingsuttalelse til utredningen om det regionale flyrutetilbudet i Norge (2025). Tilsynet vurderer konkurransen pa FOT-rutene (statlig kjop av flyrutetjenester) og mulighetene for okt konkurranse mellom flyselskaper pa regionale ruter.",
+  },
+
+  // =========================================================================
+  // BATCH 2 — More hearing statements, guidelines, and publications
+  // =========================================================================
+  // Hearing statements (Konkurransetilsynet issues 20-40 per year)
+  { doc_id: "KT-HORING-ANSKAFFELSER-2024", title: "Horingsuttalelse — NOU 2024:9 Ny lov om offentlige anskaffelser (andre delutredning)", date: "2024-08-30", type: "hearing_statement", summary: "Uttalelse til ny anskaffelseslov — konkurransefremmende tiltak i offentlige innkjop.", full_text: "Konkurransetilsynets horingsuttalelse til NOU 2024:9 om ny lov om offentlige anskaffelser. Tilsynet fokuserer pa at anskaffelsesreglene bor fremme konkurranse og unnga unodvendig konsentrasjon av leverandorer." },
+  { doc_id: "KT-HORING-BATTERI-2024", title: "Horingsuttalelse — forslag til ny batteriforskrift", date: "2024-08-29", type: "hearing_statement", summary: "Uttalelse til batteriforskrift — konkurranse i lademarkedet og gjenvinning.", full_text: "Konkurransetilsynets horingsuttalelse til forslag til ny batteriforskrift med fokus pa konkurranse i markeder for batterigjenvinning og lading." },
+  { doc_id: "KT-HORING-RENTER-GEBYR-2024", title: "Horingsuttalelse — forskrift om renter pa overtredelsesgebyr for brudd pa konkurranseloven", date: "2024-08-16", type: "hearing_statement", summary: "Uttalelse til forslaget om renteberegning pa overtredelsesgebyr.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forskrift om renter pa overtredelsesgebyr for brudd pa konkurranseloven." },
+  { doc_id: "KT-HORING-CRR3-2024", title: "Horingsuttalelse — endringer i kapitalkravsforordningen (CRR3)", date: "2024-09-04", type: "hearing_statement", summary: "Uttalelse til kapitalkravsendringer i banksektoren og konkurranse.", full_text: "Konkurransetilsynets horingsuttalelse til endringer i kapitalkravsforordningen (CRR3) med fokus pa virkningene for konkurransen i bankmarkedet." },
+  { doc_id: "KT-HORING-INVESTERINGSKONTROLL-2024", title: "Horingsuttalelse — NOU 2023:28 Investeringskontroll", date: "2024-03-15", type: "hearing_statement", summary: "Uttalelse til forslaget om ny lov om investeringskontroll (FDI-screening) og forholdet til fusjonskontroll.", full_text: "Konkurransetilsynets horingsuttalelse til NOU 2023:28 om investeringskontroll. Tilsynet vurderer forholdet mellom det foreslatte investeringskontrollregimet og den eksisterende fusjonskontrolien etter konkurranseloven." },
+  { doc_id: "KT-HORING-PRISFORSKJELLER-2024", title: "Horingsuttalelse — forskrift mot konkurranseskadelige prisforskjeller i matverdigkjeden", date: "2024-02-09", type: "hearing_statement", summary: "Uttalelse til forslaget om regulering av prisforskjeller mellom dagligvarekjeder og leverandorer.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forskrift mot konkurranseskadelige forskjeller i innkjopspriser i verdikjeden for mat." },
+  { doc_id: "KT-HORING-STROMMARKED-2024", title: "Horingsuttalelse — Tiltak for et mer forbrukervennlig strommarked", date: "2024-01-03", type: "hearing_statement", summary: "Uttalelse til forslag om endringer i energiloven for a styrke forbrukernes stilling i strommarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslag til endringer i energiloven og ulike forskrifter for et mer forbrukervennlig strommarked." },
+  { doc_id: "KT-HORING-STROMPRIS-2023", title: "Horingsuttalelse — Stromprisutvalgets rapport", date: "2023-12-15", type: "hearing_statement", summary: "Uttalelse til stromprisutvalgets forslag om regulering av kraftmarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til Stromprisutvalgets rapport. Tilsynet advarer mot prisregulering som kan svekke markedsmekanismene i kraftmarkedet." },
+  { doc_id: "KT-HORING-KONKLOV-2023", title: "Horingsuttalelse — forslag til endringer i konkurranseloven (markedsundersokelser, gebyr og ledelseskarantene)", date: "2023-06-29", type: "hearing_statement", summary: "Uttalelse til vesentlige endringer i konkurranseloven: markedsetterforskning, utredning av overtredelsesgebyr og ledelseskarantene mot fysiske personer.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om endringer i konkurranseloven som innforer hjemmel for markedsundersokelser, utredning av overtredelsesgebyr og ledelsesforbud (karantene) for fysiske personer som deltar i karteller." },
+  { doc_id: "KT-HORING-HANDELSSKIKK-2023", title: "Horingsuttalelse — endringer i lov om god handelsskikk (usaklige innkjopsbetingelser)", date: "2022-12-15", type: "hearing_statement", summary: "Uttalelse til forslaget om forskrift om forbud mot usaklige innkjopsbetingelser i dagligvarekjeden.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forskrift om forbud mot usaklige innkjopsbetingelser i verdikjeden for mat og dagligvarer." },
+  { doc_id: "KT-HORING-UTSIRA-NORD-2023", title: "Horingsuttalelse — kvalitative kriterier og stotteordning for Utsira Nord (havvind)", date: "2023-01-06", type: "hearing_statement", summary: "Uttalelse til tildeling av havvind-areal pa Utsira Nord — konkurranse i fornybar energi.", full_text: "Konkurransetilsynets horingsuttalelse til kvalitative kriterier og stotteordning for tildeling av havvindomradet Utsira Nord. Tilsynet fokuserer pa a sikre effektiv konkurranse i tildelingsprosessen." },
+  { doc_id: "KT-HORING-SORLIGE-NORDSJO-2023", title: "Horingsuttalelse — prekvalifiseringskriterier for Sorlige Nordsjo II (havvind)", date: "2023-01-06", type: "hearing_statement", summary: "Uttalelse til auksjonsmodell for havvindfeltet Sorlige Nordsjo II.", full_text: "Konkurransetilsynets horingsuttalelse til prekvalifiseringskriterier og auksjonsmodell for havvindfeltet Sorlige Nordsjo II." },
+  { doc_id: "KT-HORING-MELK-2023", title: "Horingsuttalelse — konkurransefremmende tiltak i prisutjevningsordningen for melk", date: "2023-01-27", type: "hearing_statement", summary: "Uttalelse om konkurransefremmende tiltak i prisutjevningsordningen for melk — TINEs markedsregulatorrolle.", full_text: "Konkurransetilsynets horingsuttalelse til rapport om konkurransefremmende tiltak i prisutjevningsordningen for melk. TINE har en dobbelrolle som bade markedsregulator og dominerende markedsaktir i meierisektoren." },
+  { doc_id: "KT-HORING-FJERNVARME-2023", title: "Horingsuttalelse — regulering av fjernvarmeprisen", date: "2023-02-01", type: "hearing_statement", summary: "Uttalelse om regulering av fjernvarmepris og konkurranse i fjernvarmemarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om regulering av fjernvarmeprisen." },
+  { doc_id: "KT-HORING-BOKOMSETNING-2022", title: "Horingsuttalelse — forslag til lov om omsetning av boker (bokloven)", date: "2022-11-15", type: "hearing_statement", summary: "Uttalelse til ny boklov — regulering av fastpris pa boker og virkningen pa konkurransen i bokmarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om lov om omsetning av boker (bokloven). Tilsynet er kritisk til gjeninnforing av fastprisordning, som kan hindre priskonkurranse." },
+  { doc_id: "KT-HORING-SERVITUTTER-2022", title: "Horingsuttalelse — forbud mot negative servitutter og eksklusive leieavtaler i dagligvare", date: "2022-10-05", type: "hearing_statement", summary: "Uttalelse til forslaget om forbud mot negative servitutter (etableringshindringer) og eksklusive leieavtaler i dagligvaremarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forskrift om forbud mot negative servitutter og eksklusive leieavtaler i dagligvaremarkedet. Negative servitutter hindrer etablering av konkurrerende dagligvarebutikker og bidrar til lokal markedskonsentrasjon." },
+  { doc_id: "KT-HORING-DROSJE-2022", title: "Horingsuttalelse — endringer i loyvekrav for drosje", date: "2022-06-22", type: "hearing_statement", summary: "Uttalelse til foreslatte endringer i loyvelov for drosjenaringen etter 2020-dereguleringen.", full_text: "Konkurransetilsynets horingsuttalelse til forslag om endringer i loyvekrav for drosje, i forbindelse med evaluering av drosjeliberaliseringen fra 2020." },
+  { doc_id: "KT-HORING-RETURPROVISJON-2022", title: "Horingsuttalelse — forbud mot returprovisjon i fondsmarkedet", date: "2022-10-19", type: "hearing_statement", summary: "Uttalelse til forslaget om forbud mot returprovisjon for a styrke konkurransen i fondsmarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forbud mot returprovisjon (kickbacks) fra fondsforvaltere til distributorer. Tilsynet stotter forslaget som et tiltak for a styrke konkurransen i fondsmarkedet." },
+  { doc_id: "KT-HORING-KONKLOVEN-2022", title: "Horingsuttalelse — endringer i konkurranseloven (2022)", date: "2022-01-07", type: "hearing_statement", summary: "Uttalelse til endringer i konkurranseloven — styrking av fusjonskontroll og kartellbekjempelse.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om endringer i konkurranseloven (2022)." },
+  { doc_id: "KT-HORING-ELSPARKESYKLER-2021", title: "Horingsuttalelse — regulering av elsparkesykler i Oslo", date: "2021-12-10", type: "hearing_statement", summary: "Uttalelse om antallsbegrensning og regulering av elsparkesykkelutleie og konkurransevirkninger.", full_text: "Konkurransetilsynets horingsuttalelse til regulering av elsparkesykler i Oslo. Tilsynet advarer mot for strenge antallsbegrensninger som kan hindre konkurranse mellom tilbydere som Voi, Tier og Bolt." },
+  { doc_id: "KT-HORING-DROSJE-KONTROLL-2021", title: "Horingsuttalelse — kontrollutrustning som alternativ til taksameter i drosje", date: "2021-12-21", type: "hearing_statement", summary: "Uttalelse til forslaget om a tillate digitale alternativ til tradisjonelle taksametere.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om kontrollutrustning som alternativ til taksameter i drosjenaeringen. Tilsynet stotter teknologinoytal regulering som fremmer konkurranse." },
+  { doc_id: "KT-HORING-LUFTFART-PANDEMI-2021", title: "Horingsuttalelse — kartlegging av luftfarten etter pandemiutbruddet", date: "2021-09-01", type: "hearing_statement", summary: "Innspill til luftfartsstrategi etter Covid-19 — konkurranse mellom flyselskaper.", full_text: "Konkurransetilsynets horingsuttalelse om utviklingen i luftfarten etter pandemiutbruddet og innspill til luftfartsstrategi. Tilsynet fokuserer pa a opprettholde konkurranse mellom flyselskaper etter at naringen ble sterkt pavirket av pandemien." },
+  { doc_id: "KT-HORING-PRIVATE-VELFERD-2021", title: "Horingsuttalelse — NOU 2020:13 Private aktorer i velferdsstaten", date: "2021-03-15", type: "hearing_statement", summary: "Uttalelse om bruk av private aktorer i velferdstjenester og konkurranserettslige problemstillinger.", full_text: "Konkurransetilsynets horingsuttalelse til NOU 2020:13 om private aktorer i velferdsstaten. Tilsynet vurderer konkurranserettslige aspekter ved bruk av private virksomheter i helse, omsorg og utdanning." },
+  { doc_id: "KT-HORING-DROSJE-2020", title: "Horingsuttalelse — utsatt iverksettelse av endringer i drosjereguleringen (Covid-19)", date: "2020-05-04", type: "hearing_statement", summary: "Uttalelse om utsettelse av drosjederegulering grunnet Covid-19.", full_text: "Konkurransetilsynets horingsuttalelse til forslag om utsatt iverksettelse av drosjeliberaliseringen pa grunn av Covid-19-pandemien." },
+  { doc_id: "KT-HORING-COVID-UNNTAK-2020", title: "Horingsuttalelse — forskrift om unntak fra konkurranseloven (Covid-19)", date: "2020-03-27", type: "hearing_statement", summary: "Uttalelse til forslaget om midlertidig unntak fra forbudet mot konkurransebegrensende samarbeid under pandemien.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om midlertidig unntak fra konkurranseloven paragraf 10 som folge av Covid-19-pandemien. Tilsynet aksepterte behovet for midlertidig samarbeid i kritiske sektorer (transport, helse)." },
+  { doc_id: "KT-HORING-NETTLEIE-2020", title: "Horingsuttalelse — utjevning av nettleie", date: "2020-01-08", type: "hearing_statement", summary: "Uttalelse til forslaget om utjevning av nettleie mellom kraftnetteiere.", full_text: "Konkurransetilsynets horingsuttalelse til utredning av virkemidler for utjevning av nettleie mellom ulike netteiere i Norge." },
+  { doc_id: "KT-HORING-DROSJE-LIBERALISERING-2019", title: "Horingsuttalelse — lov om god handelsskikk i dagligvarekjeden (2019)", date: "2019-06-07", type: "hearing_statement", summary: "Uttalelse til lovforslaget om god handelsskikk — regulering av maktbalanse i dagligvarekjeden.", full_text: "Konkurransetilsynets horingsuttalelse til forslag til lov om god handelsskikk i dagligvarekjeden (2019). Loven ble vedtatt og tratte i kraft i 2021." },
+  { doc_id: "KT-HORING-APOTEKFORSKRIFT-2019", title: "Papekning — apotekforskriften paragraf 13 om konkurransepolitiske hensyn", date: "2019-08-19", type: "hearing_statement", summary: "Papekning av konkurransebegrensende forhold i apotekforskriftens regler om konsesjonspolitikk.", full_text: "Konkurransetilsynets papekning av konkurransebegrensende forhold i apotekforskriften paragraf 13 om konkurransepolitiske hensyn ved tildeling av apotekkonsesjon." },
+  { doc_id: "KT-HORING-DROSJE-2018", title: "Horingsuttalelse — endringer i drosjereguleringen (oppheving av behovsprøving)", date: "2018-12-19", type: "hearing_statement", summary: "Uttalelse til forslaget om deregulering av drosjenaringen — oppheving av behovsprøving og enerettsomrader.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om endringer i drosjereguleringen, inkludert oppheving av behovsprøving, enerettsomrader og prisregulering. Tilsynet stottet dereguleringen sterkt." },
+  { doc_id: "KT-HORING-KONKURRANSENOYTRALITET-2018", title: "Horingsuttalelse — like konkurransevilkar for offentlige og private aktorer", date: "2018-05-02", type: "hearing_statement", summary: "Uttalelse til rapport om konkurransenøytralitet og offentlige virksomheters fordeler.", full_text: "Konkurransetilsynets horingsuttalelse til rapporten fra arbeidsgruppen om like konkurransevilkar for offentlige og private aktorer." },
+  { doc_id: "KT-HORING-SONDAGSHANDEL-2018", title: "Horingsuttalelse — NOU 2017:17 reglane om sondagshandel", date: "2018-05-02", type: "hearing_statement", summary: "Uttalelse til NOU om sondagshandel og konkurransevirkninger av eventuelle endringer.", full_text: "Konkurransetilsynets horingsuttalelse til NOU 2017:17 om reglene om sondagshandel og konsekvensene av endringer." },
+  { doc_id: "KT-HORING-NRK-MEDIEMANGFOLD-2018", title: "Horingsuttalelse — NRKs bidrag til mediemangfoldet", date: "2018-05-22", type: "hearing_statement", summary: "Uttalelse om NRKs rolle i mediemarkedet og effektene pa konkurransen med kommersielle medier.", full_text: "Konkurransetilsynets horingsuttalelse om NRKs bidrag til mediemangfoldet og konkurransevirkninger for kommersielle medier." },
+  { doc_id: "KT-HORING-BOKUNNTAK-2019", title: "Horingsuttalelse — unntak fra konkurranseloven for bokbransjen", date: "2019-02-11", type: "hearing_statement", summary: "Uttalelse til endringer i unntak fra konkurranseloven paragraf 10 for omsetning av boker.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om endringer i forskrift om unntak fra konkurranseloven paragraf 10 for omsetning av boker (Bokavtalen)." },
+  { doc_id: "KT-HORING-HANDEL-SERVITUTTER-2025", title: "Horingsuttalelse — endringer i lov om god handelsskikk (handheving)", date: "2025-04-02", type: "hearing_statement", summary: "Uttalelse til styrking av Dagligvaretilsynets handhevingsverktoy.", full_text: "Konkurransetilsynets horingsuttalelse til forslag om endringer i lov om god handelsskikk med fokus pa styrking av Dagligvaretilsynets handhevingsverktoy." },
+  { doc_id: "KT-HORING-SIRKULAER-2025", title: "Horingsuttalelse — Ekspertgruppen for sirkulaere aktiviteter", date: "2025-09-05", type: "hearing_statement", summary: "Uttalelse til rapporten om virkemidler for a fremme sirkulaer okonomi og konkurranse.", full_text: "Konkurransetilsynets horingsuttalelse til rapporten fra Ekspertgruppen for utredning av virkemidler for a fremme sirkulaere aktiviteter." },
+  { doc_id: "KT-HORING-MELK-SKILLE-2025", title: "Horingsuttalelse — administrativt og regnskapsmessig skille hos markedsregulator for melk", date: "2025-11-03", type: "hearing_statement", summary: "Uttalelse til forslaget om klarere skille mellom TINEs rolle som markedsregulator og kommersiell aktir i meierisektoren.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om forskrift om det administrative og regnskapsmessige skillet hos markedsregulator for melk. TINE har dobbelrolle som bade markedsregulator og dominerende markedsaktir." },
+  { doc_id: "KT-HORING-DROSJE-MAKSPRIS-2025", title: "Horingsuttalelse — midlertidige maksimalpriser for drosje", date: "2025-11-05", type: "hearing_statement", summary: "Uttalelse om mulig forlengelse av midlertidige maksimalpriser for drosjetransport.", full_text: "Konkurransetilsynets horingsuttalelse om mulig forlengelse av midlertidige maksimalpriser for loyvepliktig drosjetransport med motorvogn som ikke er forhandsbestilt." },
+  { doc_id: "KT-HORING-GJELD-2025", title: "Horingsuttalelse — endringer i gjeldsinformasjonsloven", date: "2025-07-02", type: "hearing_statement", summary: "Uttalelse til utvidelse av gjeldsinformasjonsregisteret med flere gjeldstyper.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om endringer i gjeldsinformasjonsloven og gjeldsinformasjonsforskriften." },
+  { doc_id: "KT-HORING-FONDSTJENESTER-2025", title: "Horingsuttalelse — gebyrer for fonds- og pensjonstjenester", date: "2025-06-24", type: "hearing_statement", summary: "Uttalelse til forslaget om rapporteringsplikt for fonds- og pensjonsgebyrer.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om rapporteringsplikt for gebyrer for fonds- og pensjonstjenester til Finansportalen." },
+  { doc_id: "KT-HORING-PRODUKTPAKKER-2025", title: "Horingsuttalelse — regulering av produktpakker og koblingssalg", date: "2025-04-28", type: "hearing_statement", summary: "Uttalelse til regulering av produktpakker (bundling) og koblingssalg i bank- og forsikringsmarkedet.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om regulering av produktpakker og koblingssalg." },
+  { doc_id: "KT-HORING-NORGESPRIS-2025", title: "Horingsuttalelse — ny lov om Norgespris og stromstonad", date: "2025-04-11", type: "hearing_statement", summary: "Uttalelse til forslaget om Norgespris for strom og konkurransevirkninger.", full_text: "Konkurransetilsynets horingsuttalelse til forslaget om ny lov om Norgespris og stromstonad til husholdninger. Tilsynet vurderer konkurransevirkningene av prisregulering i strommarkedet." },
+  { doc_id: "KT-HORING-AKSJEINFO-2025", title: "Horingsuttalelse — konseptvalgutredning eierskapsopplysninger aksjer", date: "2025-03-20", type: "hearing_statement", summary: "Uttalelse til konseptvalgutredning om eierskapsopplysninger i aksjemarkeder og konkurranseovervaking.", full_text: "Konkurransetilsynets horingsuttalelse til konseptvalgutredningen om eierskapsopplysninger for aksjer." },
+  { doc_id: "KT-HORING-POSTTJENESTER-2025", title: "Horingsuttalelse — fremtidens posttjenester", date: "2025-03-17", type: "hearing_statement", summary: "Uttalelse til utvalgets rapport om konkurranse i postmarkedet etter liberalisering.", full_text: "Konkurransetilsynets horingsuttalelse til rapporten fra utvalget for fremtidens posttjenester." },
+
+  // -------------------------------------------------------------------------
+  // PAPEKNIGER (Recommendations to municipalities/government)
+  // -------------------------------------------------------------------------
+  { doc_id: "KT-PAP-BILLETT-2020", title: "Papekning — konkurransebegrensende forhold i billettsystem for kollektivtransport", date: "2020-12-18", type: "guideline", summary: "Papekning til Samferdselsdepartementet om konkurransebegrensende forhold knyttet til tilgang til billettsystem i kollektivtransport.", full_text: "Konkurransetilsynets papekning til Samferdselsdepartementet om konkurransebegrensende forhold knyttet til tilgang til billettsystem etter konkurranseloven paragraf 9 forste ledd bokstav e." },
+  { doc_id: "KT-PAP-STAVANGER-2020", title: "Papekning — kommuneplan for Stavanger 2019-2034 (dagligvarekonkurranse)", date: "2020-06-29", type: "guideline", summary: "Papekning til Stavanger kommune om at kommuneplanen begrenser etablering av dagligvarebutikker og svekker lokal konkurranse.", full_text: "Konkurransetilsynets papekning til Stavanger kommune om konkurransebegrensende forhold i kommuneplan for Stavanger 2019-2034. Bestemmelser om etablering av handel og sentrumsformal kan begrense dagligvarekonkurransen." },
+  { doc_id: "KT-PAP-SKIEN-2020", title: "Papekning — kommuneplan for Skien 2014-2026 (dagligvarekonkurranse)", date: "2020-06-29", type: "guideline", summary: "Papekning til Skien kommune om at kommuneplanen begrenser etablering av dagligvarebutikker.", full_text: "Konkurransetilsynets papekning til Skien kommune om konkurransebegrensende forhold i kommuneplan for Skien 2014-2026. Bestemmelser om lokalisering av dagligvareforretninger kan begrense konkurransen." },
+  { doc_id: "KT-PAP-ALESUND-2023", title: "Papekning — Alesund kommune om dagligvarekonkurranse i arealplanlegging", date: "2023-01-01", type: "guideline", summary: "Papekning til Alesund kommune om konkurransebegrensende arealplanbestemmelser.", full_text: "Konkurransetilsynets papekning til Alesund kommune om konkurransebegrensende forhold i arealplanlegging som hindrer etablering av dagligvarebutikker." },
 ];
 
 const insertGuideline = db.prepare(
