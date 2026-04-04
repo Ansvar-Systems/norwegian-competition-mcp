@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "eu.ansvar/norwegian-competition-mcp",
+  "description": "Query Konkurransetilsynet (Norwegian Competition Authority) decisions, merger control, cartel enforcement, and market studies",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/norwegian-competition-mcp",
+    "source": "github"
+  },
+  "homepage": "https://ansvar.eu",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "keywords": [
+    "konkurransetilsynet",
+    "norwegian-competition",
+    "norway",
+    "antitrust",
+    "merger-control",
+    "cartel",
+    "compliance",
+    "mcp",
+    "ansvar"
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ansvar/norwegian-competition-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
