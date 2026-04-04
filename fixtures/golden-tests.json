@@ -1,0 +1,126 @@
+{
+  "version": "1.0",
+  "mcp_name": "Norwegian Competition MCP",
+  "tests": [
+    {
+      "id": "no-comp-001",
+      "category": "search",
+      "description": "Search decisions for 'kartell' (cartel)",
+      "tool": "no_comp_search_decisions",
+      "input": { "query": "kartell" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-002",
+      "category": "search",
+      "description": "Search decisions for 'prissamarbeid' (price-fixing) with cartel filter",
+      "tool": "no_comp_search_decisions",
+      "input": { "query": "prissamarbeid", "type": "cartel" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-003",
+      "category": "search",
+      "description": "Search decisions for 'konkurranseloven' (Competition Act)",
+      "tool": "no_comp_search_decisions",
+      "input": { "query": "konkurranseloven" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-004",
+      "category": "search",
+      "description": "Search decisions filtered by grocery sector",
+      "tool": "no_comp_search_decisions",
+      "input": { "query": "dagligvare", "sector": "grocery" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-005",
+      "category": "search",
+      "description": "Search mergers for 'foretakssammenslutning' (concentration)",
+      "tool": "no_comp_search_mergers",
+      "input": { "query": "foretakssammenslutning" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-006",
+      "category": "search",
+      "description": "Search mergers for 'oppkjop' (acquisition)",
+      "tool": "no_comp_search_mergers",
+      "input": { "query": "oppkjop" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-007",
+      "category": "search",
+      "description": "Search mergers with prohibited outcome",
+      "tool": "no_comp_search_mergers",
+      "input": { "query": "fusjon", "outcome": "prohibited" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-008",
+      "category": "search",
+      "description": "Search guidelines for 'dagligvare' (grocery)",
+      "tool": "no_comp_search_guidelines",
+      "input": { "query": "dagligvare" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-009",
+      "category": "search",
+      "description": "Search guidelines for market studies",
+      "tool": "no_comp_search_guidelines",
+      "input": { "query": "markedsstudie", "type": "market_study" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-010",
+      "category": "search",
+      "description": "Search guidelines for 'konkurranse' (competition)",
+      "tool": "no_comp_search_guidelines",
+      "input": { "query": "konkurranse" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-011",
+      "category": "meta_tool",
+      "description": "List sectors returns non-empty sector list",
+      "tool": "no_comp_list_sectors",
+      "input": {},
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "no-comp-012",
+      "category": "meta_tool",
+      "description": "About tool returns server metadata",
+      "tool": "no_comp_about",
+      "input": {},
+      "assertions": { "result_not_empty": true }
+    },
+    {
+      "id": "no-comp-013",
+      "category": "negative_test",
+      "description": "Non-existent decision case number handles gracefully",
+      "tool": "no_comp_get_decision",
+      "input": { "case_number": "NONEXISTENT-999" },
+      "assertions": { "handles_gracefully": true }
+    },
+    {
+      "id": "no-comp-014",
+      "category": "negative_test",
+      "description": "Non-existent merger case number handles gracefully",
+      "tool": "no_comp_get_merger",
+      "input": { "case_number": "NONEXISTENT-M-999" },
+      "assertions": { "handles_gracefully": true }
+    },
+    {
+      "id": "no-comp-015",
+      "category": "search",
+      "description": "Search decisions for 'overtredelsesgebyr' (administrative fine)",
+      "tool": "no_comp_search_decisions",
+      "input": { "query": "overtredelsesgebyr", "outcome": "fine" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    }
+  ]
+}

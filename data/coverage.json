@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "mcp_name": "Norwegian Competition MCP",
+  "mcp_type": "sector_regulator",
+  "coverage_date": "2026-04-04",
+  "database_version": "0.1.0",
+  "sources": [
+    {
+      "id": "konkurransetilsynet-decisions",
+      "name": "Konkurransetilsynet (Norwegian Competition Authority) -- Decisions",
+      "authority": "Konkurransetilsynet",
+      "url": "https://konkurransetilsynet.no",
+      "version": "2004-2025 published decisions",
+      "item_count": 73,
+      "item_type": "decision",
+      "last_refresh": "2026-04-04",
+      "refresh_frequency": "quarterly",
+      "completeness": "partial",
+      "completeness_note": "73 decisions covering cartel enforcement (31), abuse of dominance (24), merger decisions (11), sector inquiries (7). Fines totaling 6.48B NOK."
+    },
+    {
+      "id": "konkurransetilsynet-mergers",
+      "name": "Konkurransetilsynet (Norwegian Competition Authority) -- Mergers",
+      "authority": "Konkurransetilsynet",
+      "url": "https://konkurransetilsynet.no",
+      "version": "2004-2025 merger decisions",
+      "item_count": 43,
+      "item_type": "merger",
+      "last_refresh": "2026-04-04",
+      "refresh_frequency": "quarterly",
+      "completeness": "partial",
+      "completeness_note": "43 merger control decisions: 18 cleared, 12 cleared phase 1, 9 cleared with conditions, 4 prohibited"
+    },
+    {
+      "id": "konkurransetilsynet-guidelines",
+      "name": "Konkurransetilsynet (Norwegian Competition Authority) -- Guidelines",
+      "authority": "Konkurransetilsynet",
+      "url": "https://konkurransetilsynet.no",
+      "version": "Published guidelines and reports",
+      "item_count": 69,
+      "item_type": "guideline",
+      "last_refresh": "2026-04-04",
+      "refresh_frequency": "quarterly",
+      "completeness": "partial",
+      "completeness_note": "69 documents: 28 guidelines, 22 market studies, 19 reports (annual reports, legislative summaries, policy papers)"
+    },
+    {
+      "id": "sectors",
+      "name": "Sectors with enforcement activity",
+      "authority": "Konkurransetilsynet",
+      "url": "https://konkurransetilsynet.no",
+      "version": "Cross-referenced from decisions and mergers",
+      "item_count": 15,
+      "item_type": "sector",
+      "last_refresh": "2026-04-04",
+      "refresh_frequency": "quarterly",
+      "completeness": "full",
+      "completeness_note": "15 sectors: grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, real estate, agriculture, fisheries, technology, manufacturing, retail, professional services"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "full-text",
+      "description": "Full original document text (only summaries included)",
+      "reason": "Summaries provide sufficient context for MCP tool queries",
+      "impact": "medium",
+      "planned": true,
+      "target_version": "0.2"
+    },
+    {
+      "id": "konkurranseklagenemnda",
+      "description": "Konkurranseklagenemnda (Competition Appeals Board) decisions",
+      "reason": "Separate data source requiring dedicated ingestion",
+      "impact": "medium",
+      "planned": true,
+      "target_version": "0.3"
+    },
+    {
+      "id": "court-judgments",
+      "description": "District court and Supreme Court competition rulings",
+      "reason": "Separate data source on lovdata.no requiring dedicated ingestion",
+      "impact": "medium",
+      "planned": true,
+      "target_version": "0.3"
+    },
+    {
+      "id": "efta-esa-decisions",
+      "description": "EFTA Surveillance Authority EEA competition decisions",
+      "reason": "Covered by the EU Regulations MCP",
+      "impact": "low",
+      "planned": false
+    },
+    {
+      "id": "pre-2004-decisions",
+      "description": "Decisions under konkurranseloven av 1993 (pre-2004)",
+      "reason": "Limited historical relevance; focus on current Competition Act",
+      "impact": "low",
+      "planned": true,
+      "target_version": "0.4"
+    },
+    {
+      "id": "leniency-details",
+      "description": "Confidential leniency program application details",
+      "reason": "Confidential by law -- not published",
+      "impact": "low",
+      "planned": false
+    }
+  ],
+  "tools": [
+    {
+      "name": "no_comp_search_decisions",
+      "category": "search",
+      "description": "Full-text search across Konkurransetilsynet competition decisions (cartels, abuse of dominance, sector inquiries)",
+      "data_sources": ["konkurransetilsynet-decisions"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_get_decision",
+      "category": "lookup",
+      "description": "Retrieve a specific decision by case number",
+      "data_sources": ["konkurransetilsynet-decisions"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_search_mergers",
+      "category": "search",
+      "description": "Search merger control decisions (foretakssammenslutninger)",
+      "data_sources": ["konkurransetilsynet-mergers"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_get_merger",
+      "category": "lookup",
+      "description": "Retrieve a specific merger decision by case number",
+      "data_sources": ["konkurransetilsynet-mergers"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_search_guidelines",
+      "category": "search",
+      "description": "Search published guidelines, market studies, and reports",
+      "data_sources": ["konkurransetilsynet-guidelines"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_list_sectors",
+      "category": "lookup",
+      "description": "List all sectors with enforcement activity and case counts",
+      "data_sources": ["sectors"],
+      "verified": true
+    },
+    {
+      "name": "no_comp_about",
+      "category": "meta",
+      "description": "Return server metadata, coverage summary, tool list",
+      "data_sources": [],
+      "verified": true
+    }
+  ],
+  "summary": {
+    "total_tools": 7,
+    "total_sources": 4,
+    "total_items": 200,
+    "db_size_mb": 0.53,
+    "known_gaps": 6,
+    "gaps_planned": 4
+  }
+}

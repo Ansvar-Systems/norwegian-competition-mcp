@@ -1,0 +1,42 @@
+# sources.yml -- Data provenance metadata
+# Reference: docs/mcp-infrastructure-blueprint.md
+
+schema_version: "1.0"
+mcp_name: "Norwegian Competition MCP"
+category: "sector_regulator"
+jurisdiction: "Norway"
+
+sources:
+  - name: "Konkurransetilsynet (Norwegian Competition Authority)"
+    authority: "Konkurransetilsynet"
+    official_url: "https://konkurransetilsynet.no"
+    retrieval_method: "MANUAL_CURATION"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "quarterly"
+    license:
+      type: "Public Domain (Norwegian government publications)"
+      url: "https://konkurransetilsynet.no"
+      summary: "Norwegian competition decisions and publications are public records"
+    coverage:
+      scope: "Competition decisions (cartels, abuse of dominance, sector inquiries), merger control, guidelines, market studies"
+      item_count: 185
+    languages:
+      - "no"
+
+  - name: "Lovdata (Norwegian Legal Information)"
+    authority: "Lovdata"
+    official_url: "https://lovdata.no"
+    retrieval_method: "MANUAL_CURATION"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "quarterly"
+    license:
+      type: "Public Domain (Norwegian legislation)"
+      url: "https://lovdata.no"
+      summary: "Norwegian legislation and regulations are freely available"
+    coverage:
+      scope: "Konkurranseloven (Competition Act) text and related regulations"
+      item_count: 15
+    languages:
+      - "no"
