@@ -27,6 +27,7 @@ import {
   searchGuidelines,
   listSectors,
 } from "./db.js";
+import { buildCitation } from "./citation.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -265,7 +266,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         if (!decision) {
           return errorContent(`Decision not found: ${parsed.case_number}`);
         }
-        return textContent(decision);
+        const d = decision as Record<string, unknown>;
+        return textContent({
+          ...d,
+          _citation: buildCitation(
+            String(d.case_number ?? parsed.case_number),
+            String(d.title ?? d.case_number ?? parsed.case_number),
+            "no_comp_get_decision",
+            { case_number: parsed.case_number },
+          ),
+        });
       }
 
       case "no_comp_search_mergers": {
@@ -285,7 +295,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         if (!merger) {
           return errorContent(`Merger case not found: ${parsed.case_number}`);
         }
-        return textContent(merger);
+        const m = merger as Record<string, unknown>;
+        return textContent({
+          ...m,
+          _citation: buildCitation(
+            String(m.case_number ?? parsed.case_number),
+            String(m.title ?? m.case_number ?? parsed.case_number),
+            "no_comp_get_merger",
+            { case_number: parsed.case_number },
+          ),
+        });
       }
 
       case "no_comp_search_guidelines": {
