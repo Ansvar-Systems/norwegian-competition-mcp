@@ -1,6 +1,6 @@
 # Tools -- Norwegian Competition MCP
 
-7 tools for searching and retrieving Norwegian competition law enforcement data from Konkurransetilsynet.
+10 tools for searching and retrieving Norwegian competition law enforcement data from Konkurransetilsynet.
 
 All data is in Norwegian. Tool descriptions and parameter names are in English.
 
@@ -34,7 +34,7 @@ Full-text search across Konkurransetilsynet competition decisions -- cartel enfo
 
 **Data sources:** Konkurransetilsynet (konkurransetilsynet.no).
 
-**Limitations:** Curated dataset with 73 decisions. Summaries, not full legal text. Norwegian-language content only. Does not include appeal outcomes from Konkurranseklagenemnda or courts.
+**Limitations:** Curated dataset with 143 decisions. Summaries, not full legal text. Norwegian-language content only. Does not include appeal outcomes from Konkurranseklagenemnda or courts.
 
 ---
 
@@ -91,7 +91,7 @@ Search Konkurransetilsynet merger control decisions (foretakssammenslutninger). 
 
 **Data sources:** Konkurransetilsynet (konkurransetilsynet.no).
 
-**Limitations:** Curated dataset with 43 merger cases. Summaries, not full legal text. Norwegian-language content only. Does not include pre-notification consultations.
+**Limitations:** Curated dataset with 107 merger cases. Summaries, not full legal text. Norwegian-language content only. Does not include pre-notification consultations.
 
 ---
 
@@ -146,7 +146,7 @@ Search Konkurransetilsynet published guidelines, market studies, and reports.
 
 **Data sources:** Konkurransetilsynet (konkurransetilsynet.no).
 
-**Limitations:** Curated dataset with 69 guidelines. Summaries only. Norwegian-language content only.
+**Limitations:** Curated dataset with 149 guidelines. Summaries only. Norwegian-language content only.
 
 ---
 
@@ -170,7 +170,73 @@ List all sectors with Konkurransetilsynet enforcement activity, including decisi
 
 ---
 
-## 7. no_comp_about
+## 7. no_comp_get_guideline
+
+Get a specific Konkurransetilsynet guideline, market study, or report by document ID. Returns the full record.
+
+**Parameters:**
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `doc_id` | string | Yes | Document ID (e.g., `GL-2023-001`) |
+
+**Returns:** Single guideline record with doc_id, title, date, type, summary, and full_text, or an error if not found.
+
+**Example:**
+
+```json
+{
+  "doc_id": "GL-2023-001"
+}
+```
+
+**Data sources:** Konkurransetilsynet (konkurransetilsynet.no).
+
+**Limitations:** Exact match on doc_id. Use `no_comp_search_guidelines` for fuzzy search.
+
+---
+
+## 8. no_comp_list_sources
+
+List all data sources used by this MCP server, including authority, URL, item counts, and last refresh dates. Takes no parameters.
+
+**Parameters:** None.
+
+**Returns:** Array of source objects with id, name, authority, url, item_count, last_refresh, and refresh_frequency.
+
+**Example:**
+
+```json
+{}
+```
+
+**Data sources:** data/coverage.json (bundled metadata).
+
+**Limitations:** None.
+
+---
+
+## 9. no_comp_check_data_freshness
+
+Check the freshness of the data corpus. Returns the corpus date, age in days, per-source item counts, and a staleness flag if data is older than 180 days.
+
+**Parameters:** None.
+
+**Returns:** corpus_date, data_age_days, is_stale (boolean), refresh_frequency, and per-source breakdown.
+
+**Example:**
+
+```json
+{}
+```
+
+**Data sources:** data/coverage.json (bundled metadata).
+
+**Limitations:** Reflects the bundled corpus snapshot date, not live data.
+
+---
+
+## 10. no_comp_about
 
 Return metadata about this MCP server: version, description, data source, coverage summary, and tool list. Takes no parameters.
 
