@@ -29,6 +29,7 @@ import {
   searchMergers,
   getMerger,
   searchGuidelines,
+  getGuideline,
   listSectors,
 } from "./db.js";
 
@@ -37,6 +38,15 @@ const __dirname = dirname(__filename);
 
 const PORT = parseInt(process.env["PORT"] ?? "3000", 10);
 const SERVER_NAME = "norwegian-competition-mcp";
+
+// --- Response metadata -------------------------------------------------------
+
+const META = {
+  disclaimer: "Data from Konkurransetilsynet public records. Not legal advice.",
+  data_age: "2026-04-04",
+  copyright: "Konkurransetilsynet — Norwegian government public domain",
+  source_url: "https://konkurransetilsynet.no",
+};
 
 let pkgVersion = "0.1.0";
 try {
@@ -143,6 +153,30 @@ const TOOLS = [
     inputSchema: { type: "object" as const, properties: {}, required: [] },
   },
   {
+    name: "no_comp_get_guideline",
+    description:
+      "Get a specific Konkurransetilsynet guideline, market study, or report by document ID.",
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        doc_id: { type: "string", description: "Document ID (e.g., 'GL-2023-001')" },
+      },
+      required: ["doc_id"],
+    },
+  },
+  {
+    name: "no_comp_list_sources",
+    description:
+      "List all data sources used by this MCP server, including authority, URL, item counts, and last refresh dates.",
+    inputSchema: { type: "object" as const, properties: {}, required: [] },
+  },
+  {
+    name: "no_comp_check_data_freshness",
+    description:
+      "Check the freshness of the data corpus. Returns the corpus date, age in days, item counts per source, and a staleness flag (>180 days).",
+    inputSchema: { type: "object" as const, properties: {}, required: [] },
+  },
+  {
     name: "no_comp_about",
     description:
       "Norwegian Competition MCP server. Covers Konkurransetilsynet merger decisions, cartel enforcement, market studies, and competition guidelines.",
@@ -181,6 +215,10 @@ const SearchGuidelinesArgs = z.object({
   limit: z.number().int().positive().max(100).optional(),
 });
 
+const GetGuidelineArgs = z.object({
+  doc_id: z.string().min(1),
+});
+
 // --- MCP server factory ------------------------------------------------------
 
 function createMcpServer(): Server {
@@ -196,15 +234,15 @@ function createMcpServer(): Server {
   server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const { name, arguments: args = {} } = request.params;
 
-    function textContent(data: unknown) {
+    function textContent(data: Record<string, unknown>) {
       return {
-        content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }],
+        content: [{ type: "text" as const, text: JSON.stringify({ ...data, _meta: META }, null, 2) }],
       };
     }
 
-    function errorContent(message: string) {
+    function errorContent(message: string, errorType: "not_found" | "tool_error" | "unknown_tool" = "tool_error") {
       return {
-        content: [{ type: "text" as const, text: message }],
+        content: [{ type: "text" as const, text: JSON.stringify({ error: message, _error_type: errorType }, null, 2) }],
         isError: true as const,
       };
     }
@@ -220,16 +258,29 @@ function createMcpServer(): Server {
             outcome: parsed.outcome,
             limit: parsed.limit,
           });
-          return textContent({ results, count: results.length });
+          const resultsWithCitation = results.map((r) => ({
+            ...r,
+            _citation: {
+              canonical_ref: r.case_number,
+              lookup: { tool: "no_comp_get_decision", args: { case_number: r.case_number } },
+            },
+          }));
+          return textContent({ results: resultsWithCitation, count: results.length });
         }
 
         case "no_comp_get_decision": {
           const parsed = GetDecisionArgs.parse(args);
           const decision = getDecision(parsed.case_number);
           if (!decision) {
-            return errorContent(`Decision not found: ${parsed.case_number}`);
+            return errorContent(`Decision not found: ${parsed.case_number}`, "not_found");
           }
-          return textContent(decision);
+          return textContent({
+            ...decision,
+            _citation: {
+              canonical_ref: decision.case_number,
+              lookup: { tool: "no_comp_get_decision", args: { case_number: decision.case_number } },
+            },
+          });
         }
 
         case "no_comp_search_mergers": {
@@ -240,16 +291,29 @@ function createMcpServer(): Server {
             outcome: parsed.outcome,
             limit: parsed.limit,
           });
-          return textContent({ results, count: results.length });
+          const resultsWithCitation = results.map((r) => ({
+            ...r,
+            _citation: {
+              canonical_ref: r.case_number,
+              lookup: { tool: "no_comp_get_merger", args: { case_number: r.case_number } },
+            },
+          }));
+          return textContent({ results: resultsWithCitation, count: results.length });
         }
 
         case "no_comp_get_merger": {
           const parsed = GetMergerArgs.parse(args);
           const merger = getMerger(parsed.case_number);
           if (!merger) {
-            return errorContent(`Merger case not found: ${parsed.case_number}`);
+            return errorContent(`Merger case not found: ${parsed.case_number}`, "not_found");
           }
-          return textContent(merger);
+          return textContent({
+            ...merger,
+            _citation: {
+              canonical_ref: merger.case_number,
+              lookup: { tool: "no_comp_get_merger", args: { case_number: merger.case_number } },
+            },
+          });
         }
 
         case "no_comp_search_guidelines": {
@@ -259,12 +323,64 @@ function createMcpServer(): Server {
             type: parsed.type,
             limit: parsed.limit,
           });
-          return textContent({ results, count: results.length });
+          const resultsWithCitation = results.map((r) => ({
+            ...r,
+            _citation: {
+              canonical_ref: r.doc_id,
+              lookup: { tool: "no_comp_get_guideline", args: { doc_id: r.doc_id } },
+            },
+          }));
+          return textContent({ results: resultsWithCitation, count: results.length });
         }
 
         case "no_comp_list_sectors": {
           const sectors = listSectors();
           return textContent({ sectors, count: sectors.length });
+        }
+
+        case "no_comp_get_guideline": {
+          const parsed = GetGuidelineArgs.parse(args);
+          const guideline = getGuideline(parsed.doc_id);
+          if (!guideline) {
+            return errorContent(`Guideline not found: ${parsed.doc_id}`, "not_found");
+          }
+          return textContent({
+            ...guideline,
+            _citation: {
+              canonical_ref: guideline.doc_id,
+              lookup: { tool: "no_comp_get_guideline", args: { doc_id: guideline.doc_id } },
+            },
+          });
+        }
+
+        case "no_comp_list_sources": {
+          const coverage = JSON.parse(
+            readFileSync(join(__dirname, "..", "data", "coverage.json"), "utf8"),
+          ) as { schema_version: string; sources: unknown[] };
+          return textContent({ sources: coverage.sources, schema_version: coverage.schema_version });
+        }
+
+        case "no_comp_check_data_freshness": {
+          const coverage = JSON.parse(
+            readFileSync(join(__dirname, "..", "data", "coverage.json"), "utf8"),
+          ) as {
+            coverage_date: string;
+            sources: Array<{ id: string; last_refresh: string; item_count: number; refresh_frequency: string }>;
+          };
+          const corpusDate = coverage.coverage_date;
+          const ageMs = Date.now() - new Date(corpusDate).getTime();
+          const ageDays = Math.floor(ageMs / (1000 * 60 * 60 * 24));
+          return textContent({
+            corpus_date: corpusDate,
+            data_age_days: ageDays,
+            is_stale: ageDays > 180,
+            refresh_frequency: "quarterly",
+            sources: coverage.sources.map((s) => ({
+              id: s.id,
+              last_refresh: s.last_refresh,
+              item_count: s.item_count,
+            })),
+          });
         }
 
         case "no_comp_about": {
@@ -279,11 +395,11 @@ function createMcpServer(): Server {
         }
 
         default:
-          return errorContent(`Unknown tool: ${name}`);
+          return errorContent(`Unknown tool: ${name}`, "unknown_tool");
       }
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
-      return errorContent(`Error executing ${name}: ${message}`);
+      return errorContent(`Error executing ${name}: ${message}`, "tool_error");
     }
   });
 

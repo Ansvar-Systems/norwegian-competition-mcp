@@ -73,7 +73,10 @@ Or add to Claude Desktop config for stdio:
 | `no_comp_search_mergers` | Search merger control decisions (foretakssammenslutninger) with outcome and sector filters |
 | `no_comp_get_merger` | Get a specific merger decision by case number |
 | `no_comp_search_guidelines` | Search published guidelines, market studies, and reports |
+| `no_comp_get_guideline` | Get a specific guideline or market study by document ID |
 | `no_comp_list_sectors` | List all sectors with enforcement activity and case counts |
+| `no_comp_list_sources` | List all data sources with authority, URL, item counts, and last refresh dates |
+| `no_comp_check_data_freshness` | Check corpus date, age in days, and staleness of data |
 | `no_comp_about` | Return server metadata: version, coverage, tool list |
 
 Full tool documentation: [TOOLS.md](TOOLS.md)
@@ -84,11 +87,11 @@ Full tool documentation: [TOOLS.md](TOOLS.md)
 
 | Category | Records | Content |
 |----------|---------|---------|
-| Decisions | 73 | Cartel enforcement, abuse of dominance, sector inquiries -- fines totaling 6.48B NOK |
-| Mergers | 43 | Approved, conditional, prohibited merger decisions (foretakssammenslutninger) |
-| Guidelines | 69 | Market studies, annual reports, enforcement guidance, legislative summaries |
-| Sectors | 15 | Grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, and more |
-| **Total** | **200 records** | ~525 KB database |
+| Decisions | 143 | Cartel enforcement, abuse of dominance, sector inquiries -- fines totaling 6.48B NOK |
+| Mergers | 107 | Approved, conditional, prohibited merger decisions (foretakssammenslutninger) |
+| Guidelines | 149 | Market studies, annual reports, enforcement guidance, legislative summaries |
+| Sectors | 17 | Grocery, energy, transport, construction, financial services, healthcare, telecommunications, media, and more |
+| **Total** | **416 records** | ~680 KB database |
 
 **Language note:** All content is in Norwegian. Search queries work best in Norwegian (e.g., `foretakssammenslutning`, `prissamarbeid`, `kartell`, `dagligvare`, `overtredelsesgebyr`).
 
